@@ -4,6 +4,7 @@ require "erb"
 require "cgi"
 require "fileutils"
 require "digest/sha1"
+require "pry"
 
 # Ensure we are using a compatible version of SimpleCov
 major, minor, patch = SimpleCov::VERSION.scan(/\d+/).first(3).map(&:to_i)
@@ -37,9 +38,6 @@ module SimpleCov
       end
 
       def branchable_result?
-        # cached in initialize because we truly look it up a whole bunch of times
-        # and it's easier to cache here then in SimpleCov because there we might
-        # still enable/disable branch coverage criterion
         @branchable_result
       end
 
@@ -87,6 +85,14 @@ module SimpleCov
              "can't handle non ASCII characters in filenames. Error: " \
              "#{e.message}."
       end
+
+      def generate_stat_card(title, stat, color)
+        template("stat_card").result(binding)
+      end
+
+      def generate_table_column_head(name)
+        template("table_column_head").result(binding)
+      end
       
       # rubocop:disable Lint/SelfAssignment, Style/RedundantRegexpEscape
       def generate_group_page(title, files)
@@ -109,21 +115,21 @@ module SimpleCov
 
       def coverage_class(covered_percent)
         if covered_percent > 90
-          "green"
+          "text-green-500"
         elsif covered_percent > 80
-          "yellow"
+          "text-yellow-500"
         else
-          "red"
+          "text-red-500"
         end
       end
 
       def strength_class(covered_strength)
         if covered_strength > 1
-          "green"
+          "text-green-500"
         elsif covered_strength == 1
-          "yellow"
+          "text-yellow-500"
         else
-          "red"
+          "text-red-500"
         end
       end
 
@@ -137,9 +143,9 @@ module SimpleCov
 
       def hide_show(title)
         if title == "AllFiles"
-          "display: '';"
+          ""
         else
-          "display: none;"
+          "hidden"
         end
       end
     end

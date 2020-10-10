@@ -5,6 +5,7 @@ require "simplecov"
 SimpleCov.start do
   enable_coverage :branch
   add_filter "/test/"
+  add_group "Library", "/lib"
 end
 
 SimpleCov.formatters = [
