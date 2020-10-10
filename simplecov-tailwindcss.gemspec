@@ -28,5 +28,5 @@ Gem::Specification.new do |spec|
   spec.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "simplecov", ">= 0.16.0"
+  spec.add_dependency "simplecov", "~> 0.16"
 end
