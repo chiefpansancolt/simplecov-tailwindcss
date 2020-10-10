@@ -3,7 +3,7 @@
 module SimpleCov
   module Formatter
     class MaterialFormatter
-      VERSION = "1.1.0"
+      VERSION = "0.1.0"
     end
   end
 end
