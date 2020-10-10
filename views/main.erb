@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Code Coverage for <%= SimpleCov.project_name %></title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="<%= assets_path('application.css') %>" media="screen, projection, print" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body data-controller="toggle">
+        <div class="h-screen flex overflow-hidden bg-gray-200">
+            <div class="hidden" data-toggle-name="mobile-menu">
+                <div class="fixed inset-0 flex z-40">
+                    <div class="fixed inset-0">
+                        <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
+                    </div>
+                    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-gray-800">
+                        <div class="absolute top-0 right-0 -mr-14 p-1">
+                            <button data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="mobile-menu" class="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600" aria-label="Close sidebar">
+                                <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex-1 h-0 pb-4 overflow-y-auto">
+                            <div class="h-16 py-3 px-4 bg-gray-900">
+                                <div class="flex flex-shrink-0 items-center text-gray-100 font-bold text-lg">
+                                    <%= SimpleCov.project_name.split('-').map(&:capitalize).join(' ') %>
+                                </div>
+                                <div class="flex flex-shrink-0 items-center text-gray-500 text-xs">
+                                    Code Coverage
+                                </div>
+                            </div>
+                            <div class="flex-1 flex flex-col overflow-y-auto">
+                                <nav class="mt-5 px-2 space-y-1 mobile-nav">
+                                    <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150" name="AllFiles" onclick="navigate(this.name)">
+                                        <svg class="mr-3 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                        </svg>
+                                        All Files
+                                        (<span class="<%= coverage_class(result.source_files.covered_percent) %>">
+                                            <%= result.source_files.covered_percent.round(2) %>%
+                                        </span>)
+                                    </a>
+                                    <% result.groups.each do |name, files| %>
+                                        <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150" name="<%= remove_spaces(name) %>" onclick="navigate(this.name)">
+                                            <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                            </svg>
+                                            <%= name %>
+                                            (<span class="<%= coverage_class(files.covered_percent) %>">
+                                                <%= files.covered_percent.round(2)%>%
+                                            </span>)
+                                        </a>
+                                    <% end %>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex bg-gray-700 p-4">
+                            <div class="flex-shrink-0 group block">
+                                <div class="flex items-center">
+                                    <div class="ml-3">
+                                        <p class="text-sm leading-5 text-white">
+                                            Generated
+                                            <abbr class="timeago" datetime="<%= result.created_at %>">
+                                                <%= result.created_at %>
+                                            </abbr>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 w-14"></div>
+                </div>
+            </div>
+
+            <div class="hidden md:flex md:flex-shrink-0">
+                <div class="flex flex-col w-64">
+                    <div class="flex flex-col h-0 flex-1 bg-gray-800">
+                        <div class="flex-1 flex flex-col pb-4 overflow-y-auto">
+                            <div class="h-16 py-3 px-4 bg-gray-900">
+                                <div class="flex flex-shrink-0 items-center text-gray-100 font-bold text-lg">
+                                    <%= SimpleCov.project_name.split('-').map(&:capitalize).join(' ') %>
+                                </div>
+                                <div class="flex flex-shrink-0 items-center text-gray-500 text-xs">
+                                    Code Coverage
+                                </div>
+                            </div>
+                            <div class="flex-1 flex flex-col overflow-y-auto">
+                                <nav class="mt-5 flex-1 px-2 bg-gray-800 space-y-1 desktop-nav">
+                                    <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-white rounded-md bg-gray-900 focus:outline-none focus:bg-gray-700 transition ease-in-out duration-150" name="AllFiles" onclick="navigate(this.name)">
+                                        <svg class="mr-3 h-6 w-6 text-gray-300 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                        </svg>
+                                        All Files
+                                        (<span class="<%= coverage_class(result.source_files.covered_percent) %>">
+                                            <%= result.source_files.covered_percent.round(2) %>%
+                                        </span>)
+                                    </a>
+                                    <% result.groups.each do |name, files| %>
+                                        <a href="#" class="group flex items-center px-2 py-2 text-sm leading-5 font-medium text-gray-300 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition ease-in-out duration-150" name="<%= remove_spaces(name) %>" onclick="navigate(this.name)">
+                                            <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-300 group-focus:text-gray-300 transition ease-in-out duration-150" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                            </svg>
+                                            <%= name %>
+                                            (<span class="<%= coverage_class(files.covered_percent) %>">
+                                                <%= files.covered_percent.round(2)%>%
+                                            </span>)
+                                        </a>
+                                    <% end %>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex bg-gray-700 p-4">
+                            <div class="flex-shrink-0 w-full group block">
+                                <div class="flex items-center">
+                                    <div class="ml-3">
+                                        <p class="text-sm leading-5 text-white">
+                                            Generated
+                                            <abbr class="timeago" datetime="<%= result.created_at %>">
+                                                <%= result.created_at %>
+                                            </abbr>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-0 flex-1 overflow-hidden">
+                <div class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+                    <button data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="mobile-menu" class="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-600 md:hidden" aria-label="Open sidebar">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </button>
+                    <div class="flex-1 px-4 flex justify-between">
+                        <div class="flex-1 flex">
+                            <form class="w-full flex md:ml-0" action="#" method="GET">
+                                <label for="search_field" class="sr-only">Search</label>
+                                <div class="relative w-full text-gray-400 focus-within:text-gray-600">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" />
+                                        </svg>
+                                    </div>
+                                    <input id="search_field" class="block w-full h-full pl-8 pr-3 py-2 rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 sm:text-sm" placeholder="Search" type="search" onkeyup="searchTable(this.value.toUpperCase())" onsearch="searchTable(this.value.toUpperCase())"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none" tabindex="0">
+                    <%= generate_group_page("All Files", result.source_files) %>
+
+                    <% result.groups.each do |name, files| %>
+                        <%= generate_group_page(name, files) %>
+                    <% end %>
+                </main>
+                <footer class="bg-gray-800">
+                    <div class="max-w-screen-xl mx-auto py-4 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+                        <div class="flex justify-center space-x-6"></div>
+                        <div class="mt-0">
+                            <p class="text-center text-base leading-6 text-gray-400">
+                                Generated by
+                                <a href="https://github.com/colszowka/simplecov" class="no-underline hover:underline text-blue-500" target="_blank">Simplecov</a>
+                                v<%= SimpleCov::VERSION %>
+                                and
+                                <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss" class="no-underline hover:underline text-blue-500" target="_blank">Simplecov Tailwind</a>
+                                v<%= SimpleCov::Formatter::TailwindFormatter::VERSION %>
+                                using <%= result.command_name %>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <% result.source_files.each do |source_file| %>
+            <%= generate_dialog(source_file) %>
+        <% end %>
+
+        <script src="<%= assets_path('application.js') %>" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<div class="tab-groups pt-2 pb-6 md:py-6 <%= hide_show(title_id) %>" name="<%= title_id %>">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-2xl font-semibold text-gray-900">
+            <%= title %>
+        </h1>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-4 grid grid-cols-2 gap-5 lg:grid-cols-6 md:grid-cols-3">
+        <%= generate_stat_card('# of Files', format_number(files.length), 'text-gray-900') %>
+        <%= generate_stat_card('Relevent Lines', format_number(files.lines_of_code), 'text-gray-900') %>
+        <%= generate_stat_card('Lines Covered', format_number(files.covered_lines), 'text-green-500') %>
+        <%= generate_stat_card('Lines Missed', format_number(files.missed_lines), 'text-red-500') %>
+        <%= generate_stat_card('Covered', files.covered_percent.round(2).to_s + '%', coverage_class(files.covered_percent)) %>
+        <%= generate_stat_card('Hits/Line', files.covered_strength.round(2), strength_class(files.covered_strength)) %>
+        <% if branchable_result? %>
+            <%= generate_stat_card('Total Branches', format_number(files.total_branches), 'text-gray-900') %>
+            <%= generate_stat_card('Branches Covered', format_number(files.covered_branches), 'text-green-500') %>
+            <%= generate_stat_card('Branches Missed', format_number(files.missed_branches), 'text-red-500') %>
+            <%= generate_stat_card('Branches', files.branch_covered_percent.round(2).to_s + '%', coverage_class(files.branch_covered_percent)) %>
+        <% end %> 
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-4">
+        <div class="bg-white overflow-hidden shadow rounded-lg">
+            <div class="flex flex-col">
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-hidden rounded-lg">
+                            <table class="min-w-full divide-y divide-gray-200" id="<%= title_id %>-table">
+                                <thead>
+                                    <tr>
+                                        <th class="px-2 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('File Name') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('% Covered') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('Lines') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('Relevant Files') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('Lines Covered') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('Lines Missed') %>
+                                        </th>
+                                        <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                            <%= generate_table_column_head('Avg Hits/Line') %>
+                                        </th>
+                                        <% if branchable_result? %>
+                                            <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                                <%= generate_table_column_head('Branch % Covered') %>
+                                            </th>
+                                            <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                                <%= generate_table_column_head('Branches') %>
+                                            </th>
+                                            <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                                <%= generate_table_column_head('Covered Branches') %>
+                                            </th>
+                                            <th class="px-2 py-3 bg-gray-50 text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider clickable">
+                                                <%= generate_table_column_head('Missed Branches') %>
+                                            </th>
+                                        <% end %>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="bg-white <%= files.length == 0 ? '' : 'hidden' %>" id="<%= title_id %>-hiderow">
+                                        <th class="px-6 py-4 text-center" colspan="<%= branchable_result? ? '11' : '7' %>">
+                                            No Results Found Please Search Again!
+                                        </th>
+                                    </tr>
+                                    <% files.each.with_index do |source_file, index| %>
+                                        <tr class="row clickable <%= index.odd? ? 'bg-gray-50' : 'bg-white' %>" data-action="click->toggle#toggle touch->toggle#toggle" data-toggle-target="<%= id(source_file) %>">
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900"
+                                                title="<%= shortened_filename(source_file) %>" data-sort-val="<%= shortened_filename(source_file) %>">
+                                                <%= shortened_filename(source_file) %>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 <%= coverage_class(source_file.covered_percent) %>"
+                                                data-sort-val="<%= source_file.covered_percent.round(2).to_s %>">
+                                                <%= sprintf("%.2f", source_file.covered_percent.round(2)) %>%
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                data-sort-val="<%= source_file.lines.count %>">
+                                                <%= format_number(source_file.lines.count) %>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                data-sort-val="<%= source_file.covered_lines.count + source_file.missed_lines.count %>">
+                                                <%= format_number(source_file.covered_lines.count + source_file.missed_lines.count) %>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                data-sort-val="<%= source_file.covered_lines.count %>">
+                                                <%= format_number(source_file.covered_lines.count) %>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                data-sort-val="<%= source_file.missed_lines.count %>">
+                                                <%= format_number(source_file.missed_lines.count) %>
+                                            </td>
+                                            <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                data-sort-val="<%= source_file.covered_strength %>">
+                                                <%= format_number(source_file.covered_strength.round(2)) %>
+                                            </td>
+                                            <% if branchable_result? %>
+                                                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 <%= coverage_class(source_file.branches_coverage_percent) %>"
+                                                    data-sort-val="<%= source_file.branches_coverage_percent.round(2).to_s %>">
+                                                    <%= sprintf("%.2f", source_file.branches_coverage_percent.round(2)) %>%
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                    data-sort-val="<%= source_file.total_branches.count %>">
+                                                    <%= format_number(source_file.total_branches.count) %>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                    data-sort-val="<%= source_file.covered_branches.count %>">
+                                                    <%= format_number(source_file.covered_branches.count) %>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500"
+                                                    data-sort-val="<%= source_file.missed_branches.count %>">
+                                                    <%= format_number(source_file.missed_branches.count) %>
+                                                </td>
+                                            <% end %>
+                                        </tr>
+                                    <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
