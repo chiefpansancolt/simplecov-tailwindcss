@@ -45,7 +45,7 @@ FileUtils.chdir APP_ROOT do # rubocop:disable Metrics/BlockLength
 
     module SimpleCov
       module Formatter
-        class MaterialFormatter
+        class TailwindFormatter
           VERSION = "#{joined_version}"
         end
       end
