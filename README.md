@@ -31,8 +31,8 @@ Add the below to your Gemfile to make Simplecov Material available as a formatte
 # ./Gemfile
 
 group :test do
-  gem "simplecov"
-  gem "simplecov-tailwindcss"
+  gem "simplecov", require: false
+  gem "simplecov-tailwindcss", require: false
 end
 ```
 
@@ -42,12 +42,12 @@ end
 # ./Gemfile
 
 group :test do
-  gem "simplecov"
+  gem "simplecov", require: false
 end
 
 source "https://rubygems.pkg.github.com/chiefpansancolt"
   group :test do
-    gem "simplecov-tailwindcss"
+    gem "simplecov-tailwindcss", require: false
   end
 end
 ```
