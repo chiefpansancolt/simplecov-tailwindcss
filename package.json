@@ -1,6 +1,6 @@
 {
   "name": "simplecov-tailwind",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "HTML tailwind Design View for Simplecov formatter",
   "scripts": {
     "build": "webpack --config webpack.config.js",

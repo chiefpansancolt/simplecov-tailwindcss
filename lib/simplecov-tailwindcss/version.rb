@@ -2,8 +2,8 @@
 
 module SimpleCov
   module Formatter
-    class MaterialFormatter
-      VERSION = "1.0.1"
+    class TailwindFormatter
+      VERSION = "1.0.0"
     end
   end
 end
