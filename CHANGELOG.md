@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [1.0.1](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/1.0.1)
+
+### Bug Fixes
+
+- Remove extra require pry
+- fix typo in publish script
+
 ## Version [1.0.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/1.0.0)
 
 Initial Release
