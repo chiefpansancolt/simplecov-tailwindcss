@@ -4,7 +4,6 @@ require "erb"
 require "cgi"
 require "fileutils"
 require "digest/sha1"
-require "pry"
 
 # Ensure we are using a compatible version of SimpleCov
 major, minor, patch = SimpleCov::VERSION.scan(/\d+/).first(3).map(&:to_i)
@@ -49,7 +48,7 @@ module SimpleCov
         end
       end
 
-    private
+      private
 
       def template(name)
         ERB.new(File.read(File.join(
@@ -63,7 +62,7 @@ module SimpleCov
 
       def asset_output_path
         return @asset_output_path if defined?(@asset_output_path) &&
-                                     @asset_output_path
+          @asset_output_path
 
         @asset_output_path = File.join(
           output_path, "dist", SimpleCov::Formatter::TailwindFormatter::VERSION
@@ -93,7 +92,7 @@ module SimpleCov
       def generate_table_column_head(name)
         template("table_column_head").result(binding)
       end
-      
+
       # rubocop:disable Lint/SelfAssignment, Style/RedundantRegexpEscape
       def generate_group_page(title, files)
         title_id = title.gsub(/^[^a-zA-Z]+/, "").gsub(/[^a-zA-Z0-9\-\_]/, "")
