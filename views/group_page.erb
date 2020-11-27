@@ -7,7 +7,7 @@
 
     <div class="max-w-7xl mx-auto px-6 pt-4 grid grid-cols-2 gap-5 lg:grid-cols-6 md:grid-cols-3">
         <%= generate_stat_card('# of Files', format_number(files.length), 'text-gray-900') %>
-        <%= generate_stat_card('Relevent Lines', format_number(files.lines_of_code), 'text-gray-900') %>
+        <%= generate_stat_card('Relevant Lines', format_number(files.lines_of_code), 'text-gray-900') %>
         <%= generate_stat_card('Lines Covered', format_number(files.covered_lines), 'text-green-500') %>
         <%= generate_stat_card('Lines Missed', format_number(files.missed_lines), 'text-red-500') %>
         <%= generate_stat_card('Covered', files.covered_percent.round(2).to_s + '%', coverage_class(files.covered_percent)) %>
