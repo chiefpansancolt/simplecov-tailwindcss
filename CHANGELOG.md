@@ -1,5 +1,11 @@
 # Changelog
 
+## Version [1.0.2](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/1.0.2)
+
+### Bug Fixes
+
+- Fix missspelling for Relevant - (#4) - thanks @mdi
+
 ## Version [1.0.1](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/1.0.1)
 
 ### Bug Fixes
