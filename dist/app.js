@@ -7,3 +7,5 @@ import './scripts/timeago.js';
 const application = Application.start();
 const context = require.context('./scripts/controllers', true, /\.js$/);
 application.load(definitionsFromContext(context));
+
+import "./app.scss";

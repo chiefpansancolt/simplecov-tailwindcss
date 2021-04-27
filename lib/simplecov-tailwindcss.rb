@@ -88,10 +88,6 @@ module SimpleCov
       def generate_stat_card(title, stat, color)
         template("stat_card").result(binding)
       end
-
-      def generate_table_column_head(name)
-        template("table_column_head").result(binding)
-      end
       
       # rubocop:disable Lint/SelfAssignment, Style/RedundantRegexpEscape
       def generate_group_page(title, files)
@@ -119,6 +115,16 @@ module SimpleCov
           "text-yellow-500"
         else
           "text-red-500"
+        end
+      end
+
+      def coverage_badge_class(covered_percent)
+        if covered_percent > 90
+          "bg-green-800 text-green-100"
+        elsif covered_percent > 80
+          "bg-yellow-800 text-yellow-100"
+        else
+          "bg-red-800 text-red-100"
         end
       end
 
