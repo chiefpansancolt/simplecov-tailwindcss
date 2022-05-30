@@ -1,0 +1,14 @@
+# List files or directories below to ignore them when running prettier
+# More information: https://prettier.io/docs/en/ignore.html
+#
+
+.bundle/
+coverage/
+node_modules/
+pkg/
+public/
+Gemfile.lock
+yarn.lock
+
+bin/
+views/

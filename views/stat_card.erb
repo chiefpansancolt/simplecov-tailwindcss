@@ -1,12 +1,12 @@
-<div class="bg-white overflow-hidden shadow rounded-lg">
-    <div class="px-4 py-5 sm:p-6">
-        <dl>
-            <dt class="text-sm leading-5 font-medium text-gray-500 truncate">
-                <%= title %>
-            </dt>
-            <dd class="mt-1 text-3xl leading-9 font-semibold <%= color %>">
-                <%= stat %>
-            </dd>
-        </dl>
+<li class="col-span-1 flex rounded-md shadow-md">
+  <div class="flex flex-1 items-center justify-between truncate rounded-md border border-slate-200 bg-white/95 backdrop-blur dark:border-slate-50/[0.2] dark:bg-transparent">
+    <div class="flex-1 truncate px-4 py-2 text-sm">
+      <span class="font-medium text-slate-700 dark:text-slate-200">
+        <%= title %>
+      </span>
+      <p class="font-bold <%= color %>">
+        <%= stat %>
+      </p>
     </div>
-</div>
+  </div>
+</li>

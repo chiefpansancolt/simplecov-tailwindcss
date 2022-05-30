@@ -9,13 +9,13 @@ jobs:
 
     strategy:
       matrix:
-        ruby: [2.7.x, 2.6.x, 2.5.x, 2.4.x]
+        ruby: [3.1.2, 3.0.4, 2.7.6, 2.6.10, 2.5.9, head]
 
     steps:
     - name: Checkout Code
       uses: actions/checkout@v1
     - name: Set up Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby }}
 

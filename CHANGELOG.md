@@ -1,5 +1,14 @@
 # Changelog
 
+## Version [2.0.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.0.0)
+
+### Features
+
+- Support Dark Mode
+- Revamp of UX
+- support sort, search, and file open on page refresh
+- add esbuild support for development
+
 ## Version [1.0.2](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/1.0.2)
 
 ### Bug Fixes
