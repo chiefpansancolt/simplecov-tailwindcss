@@ -1,0 +1,26 @@
+name: Feature Request
+description: Have a feature Idea tell us about it
+title: "[Enhancement]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - chiefpansancolt
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to tell us about your idea to help make this better!
+  - type: textarea
+    attributes:
+      label: What is the Idea?
+      placeholder: Tell us what you are thinking about!
+      value: "A Idea is happening!"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
