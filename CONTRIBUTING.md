@@ -8,12 +8,12 @@ and stronger!
 
 - [Code of Conduct](#code-of-conduct)
 - [How can I Contribute](#how-can-i-contribute)
-    - [Reporting Bugs](#reporting-bugs)
-    - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
 - [Code Contributions](#code-contributions)
 - [Pull Requests](#pull-requests)
 - [Additional Notes](#additional-notes)
-    - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
+  - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
 
 ## Code of Conduct
 
@@ -82,35 +82,35 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 This section lists the labels we use to help us track and manage issues and pull requests.
 
-[GitHub search](https://help.github.com/articles/searching-issues/) makes it easy to use labels for finding groups of issues or pull requests you're interested in. For example, you might be interested in opening an Issue or perhaps opening a pull request. To help you find issues and pull requests, each label is listed with search links for finding open items with that label in Simplecov Tailwind. We  encourage you to read about [other search filters](https://help.github.com/articles/searching-issues/) which will help you write more focused queries.
+[GitHub search](https://help.github.com/articles/searching-issues/) makes it easy to use labels for finding groups of issues or pull requests you're interested in. For example, you might be interested in opening an Issue or perhaps opening a pull request. To help you find issues and pull requests, each label is listed with search links for finding open items with that label in Simplecov Tailwind. We encourage you to read about [other search filters](https://help.github.com/articles/searching-issues/) which will help you write more focused queries.
 
 #### Type of Issue and Issue State
 
-| Label Name | Repo |  Description |
-| --- | --- | --- |
-| `enhancement` | [search][search-simplecov-tailwindcss-label-enhancement] | Feature requests. |
-| `bug` | [search][search-simplecov-tailwindcss-label-bug] | Confirmed bugs or reports that are very likely to be bugs. |
-| `question` | [search][search-simplecov-tailwindcss-label-question] | Questions more than bug reports or feature requests (e.g. how do I do X). |
-| `feedback` | [search][search-simplecov-tailwindcss-label-feedback] | General feedback more than bug reports or feature requests. |
-| `help-wanted` | [search][search-simplecov-tailwindcss-label-help-wanted] | The Simplecov Tailwind team would appreciate help from the community in resolving these issues. |
-| `more-information-needed` | [search][search-simplecov-tailwindcss-label-more-information-needed] | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce). |
-| `needs-reproduction` | [search][search-simplecov-tailwindcss-label-needs-reproduction] | Likely bugs, but haven't been reliably reproduced. |
-| `blocked` | [search][search-simplecov-tailwindcss-label-blocked] | Issues blocked on other issues. |
-| `duplicate` | [search][search-simplecov-tailwindcss-label-duplicate] | Issues which are duplicates of other issues, i.e. they have been reported before. |
-| `wontfix` | [search][search-simplecov-tailwindcss-label-wontfix] | The Simplecov Material team has decided not to fix these issues for now, either because they're working as intended or for some other reason. |
-| `invalid` | [search][search-simplecov-tailwindcss-label-invalid] | Issues which aren't valid (e.g. user errors). |
-| `new` | [search][search-simplecov-tailwindcss-label-new] | Tagged on Issues that are new and have not been reviewed. |
-| `tech debt` | [search][search-simplecov-tailwindcss-label-tech-debt] | Items to clean up / refactor / restructure |
+| Label Name                | Repo                                                                 | Description                                                                                                                                   |
+| ------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enhancement`             | [search][search-simplecov-tailwindcss-label-enhancement]             | Feature requests.                                                                                                                             |
+| `bug`                     | [search][search-simplecov-tailwindcss-label-bug]                     | Confirmed bugs or reports that are very likely to be bugs.                                                                                    |
+| `question`                | [search][search-simplecov-tailwindcss-label-question]                | Questions more than bug reports or feature requests (e.g. how do I do X).                                                                     |
+| `feedback`                | [search][search-simplecov-tailwindcss-label-feedback]                | General feedback more than bug reports or feature requests.                                                                                   |
+| `help-wanted`             | [search][search-simplecov-tailwindcss-label-help-wanted]             | The Simplecov Tailwind team would appreciate help from the community in resolving these issues.                                               |
+| `more-information-needed` | [search][search-simplecov-tailwindcss-label-more-information-needed] | More information needs to be collected about these problems or feature requests (e.g. steps to reproduce).                                    |
+| `needs-reproduction`      | [search][search-simplecov-tailwindcss-label-needs-reproduction]      | Likely bugs, but haven't been reliably reproduced.                                                                                            |
+| `blocked`                 | [search][search-simplecov-tailwindcss-label-blocked]                 | Issues blocked on other issues.                                                                                                               |
+| `duplicate`               | [search][search-simplecov-tailwindcss-label-duplicate]               | Issues which are duplicates of other issues, i.e. they have been reported before.                                                             |
+| `wontfix`                 | [search][search-simplecov-tailwindcss-label-wontfix]                 | The Simplecov Material team has decided not to fix these issues for now, either because they're working as intended or for some other reason. |
+| `invalid`                 | [search][search-simplecov-tailwindcss-label-invalid]                 | Issues which aren't valid (e.g. user errors).                                                                                                 |
+| `new`                     | [search][search-simplecov-tailwindcss-label-new]                     | Tagged on Issues that are new and have not been reviewed.                                                                                     |
+| `tech debt`               | [search][search-simplecov-tailwindcss-label-tech-debt]               | Items to clean up / refactor / restructure                                                                                                    |
 
 #### Pull Request Labels
 
-| Label Name | Repo | Description
-| --- | --- | --- |
-| `work-in-progress` | [search][search-simplecov-tailwindcss-label-work-in-progress] | Pull Requests which are still being worked on, more changes will follow. |
-| `needs-review` | [search][search-simplecov-tailwindcss-label-needs-review] | Pull Requests which need code review, and approval from maintainers. |
-| `under-review` | [search][search-simplecov-tailwindcss-label-under-review] | Pull Requests being reviewed by maintainers. |
+| Label Name         | Repo                                                          | Description                                                                              |
+| ------------------ | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `work-in-progress` | [search][search-simplecov-tailwindcss-label-work-in-progress] | Pull Requests which are still being worked on, more changes will follow.                 |
+| `needs-review`     | [search][search-simplecov-tailwindcss-label-needs-review]     | Pull Requests which need code review, and approval from maintainers.                     |
+| `under-review`     | [search][search-simplecov-tailwindcss-label-under-review]     | Pull Requests being reviewed by maintainers.                                             |
 | `requires-changes` | [search][search-simplecov-tailwindcss-label-requires-changes] | Pull Requests which need to be updated based on review comments and then reviewed again. |
-| `needs-testing` | [search][search-simplecov-tailwindcss-label-needs-testing] | Pull Requests which need manual testing. |
+| `needs-testing`    | [search][search-simplecov-tailwindcss-label-needs-testing]    | Pull Requests which need manual testing.                                                 |
 
 [search-simplecov-tailwindcss-label-enhancement]: https://github.com/chiefpansancolt/simplecov-tailwindcss/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement
 [search-simplecov-tailwindcss-label-bug]: https://github.com/chiefpansancolt/simplecov-tailwindcss/issues?q=is%3Aopen+is%3Aissue+label%3Abug

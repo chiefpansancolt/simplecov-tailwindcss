@@ -18,7 +18,6 @@ Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.3 
 - [Development](#development)
 - [License](#license)
 
-
 ## Installing
 
 Add the below to your Gemfile to make Simplecov Material available as a formatter for your application
@@ -29,8 +28,8 @@ Add the below to your Gemfile to make Simplecov Material available as a formatte
 # ./Gemfile
 
 group :test do
-  gem "simplecov", require: false
-  gem "simplecov-tailwindcss", require: false
+  gem 'simplecov', require: false
+  gem 'simplecov-tailwindcss', require: false
 end
 ```
 
@@ -59,7 +58,7 @@ In your helper ensure your line about formatter usage is one of the following.
 Ensure to add the require tag at the top of your helper class where Simplecov is configured
 
 ```ruby
-require "simplecov-tailwindcss"
+require 'simplecov-tailwindcss'
 ```
 
 **Single Formatter Usage:**
@@ -71,10 +70,13 @@ SimpleCov.formatter = SimpleCov::Formatter::TailwindFormatter
 **Multi Formatter Usage:**
 
 ```ruby
-SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::HTMLFormatter,
-  SimpleCov::Formatter::TailwindFormatter
-])
+SimpleCov.formatters =
+  SimpleCov::Formatter::MultiFormatter.new(
+    [
+      SimpleCov::Formatter::HTMLFormatter,
+      SimpleCov::Formatter::TailwindFormatter,
+    ],
+  )
 ```
 
 ## Change Log

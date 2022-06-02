@@ -9,59 +9,59 @@ AllCops:
     - rake
   # Include common Ruby source files.
   Include:
-    - '**/*.rb'
-    - '**/*.arb'
-    - '**/*.axlsx'
-    - '**/*.builder'
-    - '**/*.fcgi'
-    - '**/*.gemfile'
-    - '**/*.gemspec'
-    - '**/*.god'
-    - '**/*.jb'
-    - '**/*.jbuilder'
-    - '**/*.mspec'
-    - '**/*.opal'
-    - '**/*.pluginspec'
-    - '**/*.podspec'
-    - '**/*.rabl'
-    - '**/*.rake'
-    - '**/*.rbuild'
-    - '**/*.rbw'
-    - '**/*.rbx'
-    - '**/*.ru'
-    - '**/*.ruby'
-    - '**/*.spec'
-    - '**/*.thor'
-    - '**/*.watchr'
-    - '**/.irbrc'
-    - '**/.pryrc'
-    - '**/buildfile'
-    - '**/Appraisals'
-    - '**/Berksfile'
-    - '**/Brewfile'
-    - '**/Buildfile'
-    - '**/Capfile'
-    - '**/Cheffile'
-    - '**/Dangerfile'
-    - '**/Deliverfile'
-    - '**/Fastfile'
-    - '**/*Fastfile'
-    - '**/Gemfile'
-    - '**/Guardfile'
-    - '**/Jarfile'
-    - '**/Mavenfile'
-    - '**/Podfile'
-    - '**/Puppetfile'
-    - '**/Rakefile'
-    - '**/Snapfile'
-    - '**/Thorfile'
-    - '**/Vagabondfile'
-    - '**/Vagrantfile'
+    - "**/*.rb"
+    - "**/*.arb"
+    - "**/*.axlsx"
+    - "**/*.builder"
+    - "**/*.fcgi"
+    - "**/*.gemfile"
+    - "**/*.gemspec"
+    - "**/*.god"
+    - "**/*.jb"
+    - "**/*.jbuilder"
+    - "**/*.mspec"
+    - "**/*.opal"
+    - "**/*.pluginspec"
+    - "**/*.podspec"
+    - "**/*.rabl"
+    - "**/*.rake"
+    - "**/*.rbuild"
+    - "**/*.rbw"
+    - "**/*.rbx"
+    - "**/*.ru"
+    - "**/*.ruby"
+    - "**/*.spec"
+    - "**/*.thor"
+    - "**/*.watchr"
+    - "**/.irbrc"
+    - "**/.pryrc"
+    - "**/buildfile"
+    - "**/Appraisals"
+    - "**/Berksfile"
+    - "**/Brewfile"
+    - "**/Buildfile"
+    - "**/Capfile"
+    - "**/Cheffile"
+    - "**/Dangerfile"
+    - "**/Deliverfile"
+    - "**/Fastfile"
+    - "**/*Fastfile"
+    - "**/Gemfile"
+    - "**/Guardfile"
+    - "**/Jarfile"
+    - "**/Mavenfile"
+    - "**/Podfile"
+    - "**/Puppetfile"
+    - "**/Rakefile"
+    - "**/Snapfile"
+    - "**/Thorfile"
+    - "**/Vagabondfile"
+    - "**/Vagrantfile"
   Exclude:
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
-    - '.git/**/*'
-    - 'bin/bundle'
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - ".git/**/*"
+    - "bin/bundle"
   DefaultFormatter: progress
   DisplayCopNames: true
   DisplayStyleGuide: false
@@ -79,14 +79,16 @@ AllCops:
 Style/MixinUsage:
   Enabled: false
 Lint/AmbiguousOperator:
-  Description: Checks for ambiguous operators in the first argument of a method invocation
+  Description:
+    Checks for ambiguous operators in the first argument of a method invocation
     without parentheses.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#parens-as-args
   Enabled: true
 Lint/AmbiguousBlockAssociation:
   Enabled: false
 Lint/AmbiguousRegexpLiteral:
-  Description: Checks for ambiguous regexp literals in the first argument of a method
+  Description:
+    Checks for ambiguous regexp literals in the first argument of a method
     invocation without parenthesis.
   Enabled: true
 Lint/AssignmentInCondition:
@@ -100,7 +102,8 @@ Lint/CircularArgumentReference:
   Description: Don't refer to the keyword argument in the default value.
   Enabled: true
 Layout/ConditionPosition:
-  Description: Checks for condition placed in a confusing position relative to the
+  Description:
+    Checks for condition placed in a confusing position relative to the
     keyword.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#same-line-condition
   Enabled: true
@@ -146,7 +149,8 @@ Lint/LiteralInInterpolation:
   Description: Checks for literals used in interpolation.
   Enabled: true
 Lint/Loop:
-  Description: Use Kernel#loop with break rather than begin/end/until or begin/end/while
+  Description:
+    Use Kernel#loop with break rather than begin/end/until or begin/end/while
     for post-loop tests.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#loop-with-break
   Enabled: true
@@ -169,7 +173,8 @@ Lint/RescueException:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-blind-rescues
   Enabled: true
 Lint/ShadowingOuterLocalVariable:
-  Description: Do not use the same name as outer local variable for block arguments
+  Description:
+    Do not use the same name as outer local variable for block arguments
     or block local variables.
   Enabled: true
 Lint/RedundantStringCoercion:
@@ -207,7 +212,8 @@ Lint/Void:
   Description: Possible use of operator/literal/variable in void context.
   Enabled: true
 Metrics/AbcSize:
-  Description: A calculated magnitude based on number of assignments, branches, and
+  Description:
+    A calculated magnitude based on number of assignments, branches, and
     conditions.
   Reference: http://c2.com/cgi/wiki?AbcMetric
   Enabled: true
@@ -222,7 +228,8 @@ Metrics/ClassLength:
   Enabled: true
   Max: 100
 Metrics/CyclomaticComplexity:
-  Description: A complexity metric that is strongly correlated to the number of test
+  Description:
+    A complexity metric that is strongly correlated to the number of test
     cases needed to validate a method.
   Enabled: true
 Metrics/LineLength:
@@ -245,26 +252,30 @@ Metrics/ParameterLists:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#too-many-params
   Enabled: false
 Metrics/PerceivedComplexity:
-  Description: A complexity metric geared towards measuring complexity for a human
+  Description:
+    A complexity metric geared towards measuring complexity for a human
     reader.
   Enabled: true
 Metrics/BlockLength:
   Exclude:
-  - Rakefile
-  - "**/*.rake"
-  - spec/**/*.rb
-  - "**/*.gemspec"
+    - Rakefile
+    - "**/*.rake"
+    - spec/**/*.rb
+    - "**/*.gemspec"
 Performance/Count:
-  Description: Use `count` instead of `select...size`, `reject...size`, `select...count`,
+  Description:
+    Use `count` instead of `select...size`, `reject...size`, `select...count`,
     `reject...count`, `select...length`, and `reject...length`.
   Enabled: true
 Performance/Detect:
-  Description: Use `detect` instead of `select.first`, `find_all.first`, `select.last`,
+  Description:
+    Use `detect` instead of `select.first`, `find_all.first`, `select.last`,
     and `find_all.last`.
   Reference: https://github.com/JuanitoFatas/fast-ruby#enumerabledetect-vs-enumerableselectfirst-code
   Enabled: true
 Performance/FlatMap:
-  Description: Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)`
+  Description:
+    Use `Enumerable#flat_map` instead of `Enumerable#map...Array#flatten(1)`
     or `Enumberable#collect..Array#flatten(1)`
   Reference: https://github.com/JuanitoFatas/fast-ruby#enumerablemaparrayflatten-vs-enumerableflat_map-code
   Enabled: true
@@ -278,12 +289,14 @@ Style/Sample:
   Reference: https://github.com/JuanitoFatas/fast-ruby#arrayshufflefirst-vs-arraysample-code
   Enabled: true
 Performance/Size:
-  Description: Use `size` instead of `count` for counting the number of elements in
+  Description:
+    Use `size` instead of `count` for counting the number of elements in
     `Array` and `Hash`.
   Reference: https://github.com/JuanitoFatas/fast-ruby#arraycount-vs-arraysize-code
   Enabled: true
 Performance/StringReplacement:
-  Description: Use `tr` instead of `gsub` when you are replacing the same number of
+  Description:
+    Use `tr` instead of `gsub` when you are replacing the same number of
     characters. Use `delete` instead of `gsub` when you are deleting characters.
   Reference: https://github.com/JuanitoFatas/fast-ruby#stringgsub-vs-stringtr-code
   Enabled: true
@@ -345,7 +358,8 @@ Layout/BlockEndNewline:
   Description: Put end statement of multiline block on its own line.
   Enabled: true
 Style/BlockDelimiters:
-  Description: Avoid using {...} for multi-line blocks (multiline chaining is always
+  Description:
+    Avoid using {...} for multi-line blocks (multiline chaining is always
     ugly). Prefer {...} over do...end for single-line blocks.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#single-line-blocks
   Enabled: true
@@ -383,7 +397,7 @@ Layout/ClosingParenthesisIndentation:
   Description: Checks the indentation of hanging closing parentheses.
   Enabled: false
 Style/ColonMethodCall:
-  Description: 'Do not use :: for method call.'
+  Description: "Do not use :: for method call."
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#double-colons
   Enabled: true
 Style/CommandLiteral:
@@ -471,7 +485,8 @@ Naming/FileName:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#snake-case-files
   Enabled: false
 Layout/InitialIndentation:
-  Description: Checks the indentation of the first non-blank non-comment line in a
+  Description:
+    Checks the indentation of the first non-blank non-comment line in a
     file.
   Enabled: false
 Layout/FirstArgumentIndentation:
@@ -499,8 +514,9 @@ Style/GuardClause:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals
   Enabled: true
 Style/HashSyntax:
-  Description: 'Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a =>
-    1, :b => 2 }.'
+  Description:
+    "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a =>
+    1, :b => 2 }."
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-literals
   Enabled: true
 Style/IfUnlessModifier:
@@ -541,7 +557,8 @@ Layout/LeadingCommentSpace:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#hash-space
   Enabled: true
 Style/LineEndConcatenation:
-  Description: Use \ instead of + or << to concatenate two string literals at line
+  Description:
+    Use \ instead of + or << to concatenate two string literals at line
     end.
   Enabled: true
 Style/MethodCallWithoutArgsParentheses:
@@ -575,7 +592,7 @@ Layout/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
   Enabled: false
 Style/MultilineTernaryOperator:
-  Description: 'Avoid multi-line ?: (the ternary operator); use if/unless instead.'
+  Description: "Avoid multi-line ?: (the ternary operator); use if/unless instead."
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary
   Enabled: true
 Style/NegatedIf:
@@ -615,12 +632,14 @@ Style/OneLineConditional:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#ternary-operator
   Enabled: false
 Style/OptionalArguments:
-  Description: Checks for optional arguments that do not appear at the end of the
+  Description:
+    Checks for optional arguments that do not appear at the end of the
     argument list
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#optional-arguments
   Enabled: false
 Style/ParallelAssignment:
-  Description: Check for simple usages of parallel assignment. It will only warn when
+  Description:
+    Check for simple usages of parallel assignment. It will only warn when
     the number of variables matches on both sides of the assignment. This also provides
     performance benefits
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#parallel-assignment
@@ -687,7 +706,8 @@ Style/RescueModifier:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-rescue-modifiers
   Enabled: false
 Style/SelfAssignment:
-  Description: Checks for places where self-assignment shorthand should have been
+  Description:
+    Checks for places where self-assignment shorthand should have been
     used.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#self-assignment
   Enabled: true
@@ -708,7 +728,8 @@ Style/SingleLineMethods:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#no-single-line-methods
   Enabled: false
 Layout/SpaceBeforeFirstArg:
-  Description: Checks that exactly one space is used between a method name and the
+  Description:
+    Checks that exactly one space is used between a method name and the
     first argument for method calls without parentheses.
   Enabled: true
 Layout/SpaceAfterColon:
@@ -723,7 +744,8 @@ Layout/SpaceAroundKeyword:
   Description: Use spaces around keywords.
   Enabled: true
 Layout/SpaceAfterMethodName:
-  Description: Do not put a space between a method name and the opening parenthesis
+  Description:
+    Do not put a space between a method name and the opening parenthesis
     in a method definition.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#parens-no-spaces
   Enabled: true
@@ -748,7 +770,8 @@ Layout/SpaceBeforeSemicolon:
   Description: No spaces before semicolons.
   Enabled: false
 Layout/SpaceInsideBlockBraces:
-  Description: Checks that block braces have or don't have surrounding space. For
+  Description:
+    Checks that block braces have or don't have surrounding space. For
     blocks taking parameters, checks that the left brace has or doesn't have trailing
     space.
   Enabled: false
@@ -756,7 +779,8 @@ Layout/SpaceAroundBlockParameters:
   Description: Checks the spacing inside and after block parameters pipes.
   Enabled: true
 Layout/SpaceAroundEqualsInParameterDefault:
-  Description: Checks that the equals signs in parameter default assignments have
+  Description:
+    Checks that the equals signs in parameter default assignments have
     or don't have surrounding space depending on configuration.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#spaces-around-equals
   Enabled: true
@@ -790,7 +814,8 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
   Enabled: true
 Style/StringLiteralsInInterpolation:
-  Description: Checks if uses of quotes inside expressions in interpolated strings
+  Description:
+    Checks if uses of quotes inside expressions in interpolated strings
     match the configured preference.
   Enabled: true
 Style/StructInheritance:
@@ -835,11 +860,13 @@ Style/RedundantPercentQ:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#percent-q
   Enabled: false
 Style/TrailingUnderscoreVariable:
-  Description: Checks for the usage of unneeded trailing underscores at the end of
+  Description:
+    Checks for the usage of unneeded trailing underscores at the end of
     parallel variable assignment.
   Enabled: false
 Style/VariableInterpolation:
-  Description: Don't interpolate global, instance and class variables directly in
+  Description:
+    Don't interpolate global, instance and class variables directly in
     strings.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#curlies-interpolate
   Enabled: true
