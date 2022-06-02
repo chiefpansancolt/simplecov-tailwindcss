@@ -21,6 +21,11 @@ jobs:
 
     - name: Build and Test
       run: |
-        gem install bundler
+        gem install bundler -v 2.3.11
         bundle install --jobs 4 --retry 3
         bundle exec rake test
+    - name: Upload coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage
