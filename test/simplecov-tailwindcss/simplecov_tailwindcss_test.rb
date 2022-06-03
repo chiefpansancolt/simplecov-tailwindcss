@@ -14,7 +14,7 @@ class SimplecovTailwindcssTest < Minitest::Test
   def test_version
     version = SimpleCov::Formatter::TailwindFormatter::VERSION
 
-    assert(!version.nil?)
+    refute_nil(version)
   end
 
   def test_execution # rubocop:disable Metrics/MethodLength
@@ -31,7 +31,7 @@ class SimplecovTailwindcssTest < Minitest::Test
     @result = SimpleCov::Result.new(@original_result)
     SimpleCov::Formatter::TailwindFormatter.new.format(@result)
 
-    assert(File.exist?("/#{SimpleCov.coverage_path}/index.html"))
+    assert_path_exists("/#{SimpleCov.coverage_path}/index.html")
   end
 
   def source_fixture(filename)
