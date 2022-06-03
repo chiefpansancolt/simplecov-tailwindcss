@@ -31,9 +31,9 @@ jobs:
 
       - name: Compile JS
         run: yarn build:js
-  
+
   run-css-build:
-    name: Run JS Build
+    name: Run CSS Build
     runs-on: ubuntu-latest
 
     steps:
@@ -50,9 +50,9 @@ jobs:
 
       - name: Compile JS
         run: yarn build:css
-  
+
   run-gem-build:
-    name: Run JS Build
+    name: Run Gem Build
     runs-on: ubuntu-latest
 
     steps:

@@ -9,6 +9,6 @@ pkg/
 public/
 Gemfile.lock
 yarn.lock
-
+public/
 bin/
 views/
