@@ -1,18 +1,16 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
-  static classes = ["hide", "active", "inactive"]
+  static classes = ['hide', 'active', 'inactive']
   static values = { currentActive: String }
 
   initialize() {
     let url = new URL(document.location)
-    this.currentActiveValue = url.searchParams.get("tabName")
-      ? url.searchParams.get("tabName")
-      : ""
+    this.currentActiveValue = url.searchParams.get('tabName') ? url.searchParams.get('tabName') : ''
   }
 
   connect() {
-    if (this.currentActiveValue != "") {
+    if (this.currentActiveValue != '') {
       this.navigate()
     }
   }
@@ -20,20 +18,20 @@ export default class extends Controller {
   navigateEvent(event) {
     let url = new URL(document.location)
     this.currentActiveValue = event.currentTarget.dataset.index
-    url.searchParams.set("tabName", event.currentTarget.dataset.index)
-    window.history.pushState({}, "", url)
+    url.searchParams.set('tabName', event.currentTarget.dataset.index)
+    window.history.pushState({}, '', url)
     this.navigate()
   }
 
   navigate() {
-    let navBodies = document.querySelectorAll(".navBody")
+    let navBodies = document.querySelectorAll('.navBody')
     navBodies.forEach((el) => {
       if (!el.classList.contains(this.hideClass)) {
         el.classList.add(this.hideClass)
       }
     })
 
-    let navs = document.querySelectorAll(".nav")
+    let navs = document.querySelectorAll('.nav')
     navs.forEach((nav) => {
       if (nav.classList.contains(...this.activeClasses)) {
         nav.classList.remove(...this.activeClasses)
@@ -48,8 +46,6 @@ export default class extends Controller {
       }
     })
 
-    document
-      .getElementById(this.currentActiveValue)
-      .classList.remove(this.hideClass)
+    document.getElementById(this.currentActiveValue).classList.remove(this.hideClass)
   }
 }

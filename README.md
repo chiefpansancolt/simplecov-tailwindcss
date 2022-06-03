@@ -72,10 +72,7 @@ SimpleCov.formatter = SimpleCov::Formatter::TailwindFormatter
 ```ruby
 SimpleCov.formatters =
   SimpleCov::Formatter::MultiFormatter.new(
-    [
-      SimpleCov::Formatter::HTMLFormatter,
-      SimpleCov::Formatter::TailwindFormatter,
-    ],
+    [SimpleCov::Formatter::HTMLFormatter, SimpleCov::Formatter::TailwindFormatter],
   )
 ```
 

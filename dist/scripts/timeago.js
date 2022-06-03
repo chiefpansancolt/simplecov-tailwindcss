@@ -1,3 +1,3 @@
-import { render } from "timeago.js"
+import { render } from 'timeago.js'
 
-render(document.querySelectorAll(".timeago"))
+render(document.querySelectorAll('.timeago'))

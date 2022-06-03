@@ -8,12 +8,12 @@ and stronger!
 
 - [Code of Conduct](#code-of-conduct)
 - [How can I Contribute](#how-can-i-contribute)
-    - [Reporting Bugs](#reporting-bugs)
-    - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
 - [Code Contributions](#code-contributions)
 - [Pull Requests](#pull-requests)
 - [Additional Notes](#additional-notes)
-    - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
+  - [Issue and Pull Request Labels](#issue-and-pull-request-labels)
 
 ## Code of Conduct
 

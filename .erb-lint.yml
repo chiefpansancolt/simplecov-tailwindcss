@@ -1,5 +1,5 @@
 ---
-glob: "**/*.erb"
+glob: '**/*.erb'
 exclude:
   - '**/vendor/**/*'
   - '**/node_modules/**/*'

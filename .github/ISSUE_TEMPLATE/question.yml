@@ -1,7 +1,7 @@
 name: Question
 description: Have a Question that is outside bug/feature?
-title: "[Question]: "
-labels: ["question", "triage"]
+title: '[Question]: '
+labels: ['question', 'triage']
 assignees:
   - chiefpansancolt
 body:
@@ -13,7 +13,7 @@ body:
     attributes:
       label: What is the Question?
       placeholder: Tell us what you are thinking about!
-      value: "A Question is happening!"
+      value: 'A Question is happening!'
     validations:
       required: true
   - type: checkboxes
