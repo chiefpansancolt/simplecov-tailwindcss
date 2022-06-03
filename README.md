@@ -5,11 +5,11 @@
 ![GitHub Workflow Status Lints](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Lint?label=Lints&logo=github&style=for-the-badge)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chiefpansancolt/simplecov-tailwindcss?label=Release&logo=github&style=for-the-badge)
 ![Gem](https://img.shields.io/gem/dt/simplecov-tailwindcss?color=orange&logo=rubygems&style=for-the-badge)
-[![Discord](https://img.shields.io/discord/450095227185659905?color=yellow&label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/FPfA3w6)
+[![Discord](https://img.shields.io/discord/450095227185659905?color=yellow&label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/pBxGpfrmD4)
 
 > Note: To learn more about SimpleCov, check out the main repo at https://github.com/colszowka/simplecov
 
-Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.3 or greater.
+Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.5 or greater.
 
 ## Table of Contents
 
