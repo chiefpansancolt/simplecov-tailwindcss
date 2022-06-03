@@ -7,7 +7,6 @@ coverage/
 node_modules/
 pkg/
 public/
-public/application.js
 Gemfile.lock
 yarn.lock
 bin/
