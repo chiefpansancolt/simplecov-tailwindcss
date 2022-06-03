@@ -82,50 +82,50 @@ export default class extends Controller {
     list.sort(function (a, b) {
       let value1, value2
       switch (sortValue) {
-        case "coveredpercent":
-          value1 = a.dataset.coveredPercent
-          value2 = b.dataset.coveredPercent
-          break
-        case "lines":
-          value1 = a.dataset.lines
-          value2 = b.dataset.lines
-          break
-        case "releventlines":
-          value1 = a.dataset.releventLines
-          value2 = b.dataset.releventLines
-          break
-        case "coveredlines":
-          value1 = a.dataset.coveredLines
-          value2 = b.dataset.coveredLines
-          break
-        case "missedlines":
-          value1 = a.dataset.missedLines
-          value2 = b.dataset.missedLines
-          break
-        case "coveredstrength":
-          value1 = a.dataset.coveredStrength
-          value2 = b.dataset.coveredStrength
-          break
-        case "branchcoveredpercentches":
-          value1 = a.dataset.branchCoveredPercent
-          value2 = b.dataset.branchCoveredPercent
-          break
-        case "branches":
-          value1 = a.dataset.branches
-          value2 = b.dataset.branches
-          break
-        case "branchescoveredes":
-          value1 = a.dataset.branchesCovered
-          value2 = b.dataset.branchesCovered
-          break
-        case "branchesmisseds":
-          value1 = a.dataset.branchesMissed
-          value2 = b.dataset.branchesMissed
-          break
-        default:
-          value1 = 0
-          value2 = 0
-          break
+      case "coveredpercent":
+        value1 = a.dataset.coveredPercent
+        value2 = b.dataset.coveredPercent
+        break
+      case "lines":
+        value1 = a.dataset.lines
+        value2 = b.dataset.lines
+        break
+      case "releventlines":
+        value1 = a.dataset.releventLines
+        value2 = b.dataset.releventLines
+        break
+      case "coveredlines":
+        value1 = a.dataset.coveredLines
+        value2 = b.dataset.coveredLines
+        break
+      case "missedlines":
+        value1 = a.dataset.missedLines
+        value2 = b.dataset.missedLines
+        break
+      case "coveredstrength":
+        value1 = a.dataset.coveredStrength
+        value2 = b.dataset.coveredStrength
+        break
+      case "branchcoveredpercentches":
+        value1 = a.dataset.branchCoveredPercent
+        value2 = b.dataset.branchCoveredPercent
+        break
+      case "branches":
+        value1 = a.dataset.branches
+        value2 = b.dataset.branches
+        break
+      case "branchescoveredes":
+        value1 = a.dataset.branchesCovered
+        value2 = b.dataset.branchesCovered
+        break
+      case "branchesmisseds":
+        value1 = a.dataset.branchesMissed
+        value2 = b.dataset.branchesMissed
+        break
+      default:
+        value1 = 0
+        value2 = 0
+        break
       }
 
       return (
