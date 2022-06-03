@@ -1,9 +1,11 @@
 # Simplecov Tailwind
 
-![Tests](https://github.com/chiefpansancolt/simplecov-tailwindcss/workflows/Tests/badge.svg)
-![GitHub release](https://img.shields.io/github/release/chiefpansancolt/simplecov-tailwindcss?logo=github&style=flat-square)
-![Gem](https://img.shields.io/gem/dt/simplecov-tailwindcss?logo=rubygems&style=flat-square)
-[![Discord](https://img.shields.io/discord/450095227185659905?label=Discord&logo=discord&style=flat-square)](https://discord.gg/FPfA3w6)
+![GitHub Workflow Status Tests](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Tests?label=Tests&logo=github&style=for-the-badge)
+![GitHub Workflow Status Builds](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Build?label=Builds&logo=github&style=for-the-badge)
+![GitHub Workflow Status Lints](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Lint?label=Lints&logo=github&style=for-the-badge)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chiefpansancolt/simplecov-tailwindcss?label=Release&logo=github&style=for-the-badge)
+![Gem](https://img.shields.io/gem/dt/simplecov-tailwindcss?color=orange&logo=rubygems&style=for-the-badge)
+[![Discord](https://img.shields.io/discord/450095227185659905?color=yellow&label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/FPfA3w6)
 
 > Note: To learn more about SimpleCov, check out the main repo at https://github.com/colszowka/simplecov
 
@@ -95,7 +97,7 @@ To see more about Contributing check out this [document](https://github.com/chie
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `yarn test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-When working with SCSS or JS ensure to run `yarn build` to compile tailwind and JS to the public folder. This will ensure you have the latest CSS and JS used when testing locally.
+When working with CSS or JS ensure to run `yarn build` to compile tailwind and JS to the public folder. This will ensure you have the latest CSS and JS used when testing locally.
 
 _**NOTE: Do not commit any changes made in public folder from compiling as this will be performed by the owner before building of a release.**_
 
