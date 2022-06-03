@@ -1,7 +1,7 @@
 name: Feature Request
 description: Have a feature Idea tell us about it
-title: "[Enhancement]: "
-labels: ["enhancement", "triage"]
+title: '[Enhancement]: '
+labels: ['enhancement', 'triage']
 assignees:
   - chiefpansancolt
 body:
@@ -13,7 +13,7 @@ body:
     attributes:
       label: What is the Idea?
       placeholder: Tell us what you are thinking about!
-      value: "A Idea is happening!"
+      value: 'A Idea is happening!'
     validations:
       required: true
   - type: checkboxes

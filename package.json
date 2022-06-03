@@ -1,57 +1,62 @@
 {
-	"name": "simplecov-tailwind",
-	"version": "2.0.0",
-	"description": "HTML tailwind Design View for Simplecov formatter",
-	"scripts": {
-		"build": "npm-run-all build:*",
-		"build:css": "npx tailwindcss -i dist/app.css -o public/application.css --minify",
-		"build:js": "esbuild --bundle dist/app.js --outfile=public/application.js --minify",
-		"test:start": "bundle exec rake test",
-		"test:open": "open coverage/index.html",
-		"test": "npm-run-all test:*",
-		"markdown": "markdownlint CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md README.md -c .markdownlint.yml",
-		"ruby": "rubocop",
-		"javascript": "eslint dist",
-		"css": "stylelint dist/**/*.css",
-		"gem:build": "gem build simplecov-tailwindcss.gemspec",
-		"format": "prettier --write '*{js,md}' '*/**{js,css,md,yml}'",
-		"full": "yarn build & yarn gem:build & yarn test"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chiefpansancolt/simplecov-tailwind"
-	},
-	"keywords": [
-		"simplecov",
-		"simplecov-formatter",
-		"simplecov-tailwind"
-	],
-	"author": {
-		"name": "Christopher Pezza",
-		"email": "github@chiefpansancolt.live"
-	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/chiefpansancolt/simplecov-tailwind/issues"
-	},
-	"contributors": [
-		{
-			"name": "Christopher Pezza",
-			"email": "github@chiefpansancolt.live"
-		}
-	],
-	"homepage": "https://chiefpansancolt.live/docs/simplecov_tailwind/",
-	"devDependencies": {
-		"@hotwired/stimulus": "^3.0.1",
-		"@prettier/plugin-ruby": "^2.1.0",
-		"@tailwindcss/forms": "^0.5.0",
-		"@tailwindcss/typography": "^0.5.2",
-		"esbuild": "^0.14.36",
-		"markdownlint": "^0.25.1",
-		"npm-run-all": "^4.1.5",
-		"prettier": "^2.6.2",
-		"prettier-plugin-erb": "^0.4.0",
-		"tailwindcss": "^3.0.24",
-		"timeago.js": "^4.0.2"
-	}
+  "name": "simplecov-tailwind",
+  "version": "2.0.0",
+  "description": "HTML tailwind Design View for Simplecov formatter",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:css": "npx tailwindcss -i dist/app.css -o public/application.css --minify",
+    "build:js": "esbuild --bundle dist/app.js --outfile=public/application.js --minify",
+    "test:start": "bundle exec rake test",
+    "test:open": "open coverage/index.html",
+    "test": "npm-run-all test:*",
+    "lint:markdown": "markdownlint CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md README.md -c .markdownlint.yml",
+    "lint:ruby": "rubocop",
+    "lint:erb": "bundle exec erblint --lint-all",
+    "lint:javascript": "eslint dist",
+    "gem:build": "gem build simplecov-tailwindcss.gemspec",
+    "format": "prettier './**/*.{css,js,json,yml,md}' --list-different",
+    "format:fix": "prettier './**/*.{css,js,json,yml,md}' --write",
+    "full": "yarn build & yarn gem:build & yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chiefpansancolt/simplecov-tailwind"
+  },
+  "keywords": [
+    "simplecov",
+    "simplecov-formatter",
+    "simplecov-tailwind"
+  ],
+  "author": {
+    "name": "Christopher Pezza",
+    "email": "github@chiefpansancolt.live"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiefpansancolt/simplecov-tailwind/issues"
+  },
+  "contributors": [
+    {
+      "name": "Christopher Pezza",
+      "email": "github@chiefpansancolt.live"
+    }
+  ],
+  "homepage": "https://chiefpansancolt.live/docs/simplecov_tailwind/",
+  "babel": {},
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/eslint-parser": "^7.18.2",
+    "@hotwired/stimulus": "^3.0.1",
+    "@prettier/plugin-ruby": "^2.1.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "esbuild": "^0.14.36",
+    "eslint": "^8.16.0",
+    "markdownlint": "^0.25.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "prettier-plugin-erb": "^0.4.0",
+    "tailwindcss": "^3.0.24",
+    "timeago.js": "^4.0.2"
+  }
 }

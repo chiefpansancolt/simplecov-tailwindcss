@@ -1,14 +1,8 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
-  static targets = ["container", "background", "view"]
-  static classes = [
-    "hide",
-    "toBackground",
-    "fromBackground",
-    "toView",
-    "fromView",
-  ]
+  static targets = ['container', 'background', 'view']
+  static classes = ['hide', 'toBackground', 'fromBackground', 'toView', 'fromView']
   static values = {
     allowClose: Boolean,
     openTimeout: Number,
@@ -17,11 +11,11 @@ export default class extends Controller {
   }
 
   initialize() {
-    this.currentActiveValue = window.location.hash.replace("#", "")
+    this.currentActiveValue = window.location.hash.replace('#', '')
   }
 
   connect() {
-    if (this.currentActiveValue != "") {
+    if (this.currentActiveValue != '') {
       this.open()
     }
   }
@@ -36,9 +30,7 @@ export default class extends Controller {
   }
 
   open() {
-    document
-      .getElementById(this.currentActiveValue)
-      .classList.remove(this.hideClass)
+    document.getElementById(this.currentActiveValue).classList.remove(this.hideClass)
     this.containerTarget.classList.remove(this.hideClass)
 
     requestAnimationFrame(() => {
@@ -60,10 +52,8 @@ export default class extends Controller {
     requestAnimationFrame(() => {
       setTimeout(() => {
         this.containerTarget.classList.add(this.hideClass)
-        document
-          .getElementById(this.currentActiveValue)
-          .classList.add(this.hideClass)
-        this.currentActiveValue = ""
+        document.getElementById(this.currentActiveValue).classList.add(this.hideClass)
+        this.currentActiveValue = ''
         this.remove_hash_from_url()
       }, this.closeTimeoutValue)
     })
@@ -76,10 +66,7 @@ export default class extends Controller {
   }
 
   closeWithKeyboard(e) {
-    if (
-      e.keyCode === 27 &&
-      !this.containerTarget.classList.contains(this.hideClass)
-    ) {
+    if (e.keyCode === 27 && !this.containerTarget.classList.contains(this.hideClass)) {
       this.close()
     }
   }
@@ -87,8 +74,8 @@ export default class extends Controller {
   remove_hash_from_url() {
     var uri = window.location.toString()
 
-    if (uri.indexOf("#") > 0) {
-      var clean_uri = uri.substring(0, uri.indexOf("#"))
+    if (uri.indexOf('#') > 0) {
+      var clean_uri = uri.substring(0, uri.indexOf('#'))
       window.history.replaceState({}, document.title, clean_uri)
     }
   }
