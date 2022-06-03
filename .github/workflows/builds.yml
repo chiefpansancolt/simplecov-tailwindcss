@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: application.js
-          path: path/application.js
+          path: public/application.js
 
 
   run-css-build:
@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: application.css
-          path: path/application.css
+          path: public/application.css
 
   run-gem-build:
     name: Run Gem Build
@@ -89,4 +89,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: simplecov-tailwindcss.gem
-          path: .gem
+          path: *.gem
