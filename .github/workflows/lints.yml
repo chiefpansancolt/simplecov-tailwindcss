@@ -46,3 +46,4 @@ jobs:
           prettier: true
           rubocop: true
           erblint: true
+          erblint_args: "--lint-all"
