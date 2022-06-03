@@ -89,4 +89,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: simplecov-tailwindcss.gem
-          path: *.gem
+          path: ./*.gem
