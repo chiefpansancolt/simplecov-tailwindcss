@@ -12,7 +12,6 @@
     "markdown": "markdownlint CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md README.md -c .markdownlint.yml",
     "ruby": "rubocop",
     "javascript": "eslint dist",
-    "css": "stylelint dist/**/*.css",
     "gem:build": "gem build simplecov-tailwindcss.gemspec",
     "format": "prettier './**/*.{css,js,json,yml,md}' --list-different",
     "format:fix": "prettier './**/*.{css,js,json,yml,md}' --write",
