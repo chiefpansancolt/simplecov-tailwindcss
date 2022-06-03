@@ -34,7 +34,7 @@ jobs:
         with:
           ruby-version: .ruby-version
 
-      - name: Build and Test
+      - name: Install Ruby Gem dependencies
         run: |
           gem install bundler -v 2.3.11
           bundle install --jobs 4 --retry 3
