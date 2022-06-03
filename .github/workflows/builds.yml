@@ -38,7 +38,6 @@ jobs:
           name: application.js
           path: public/application.js
 
-
   run-css-build:
     name: Run CSS Build
     runs-on: ubuntu-latest

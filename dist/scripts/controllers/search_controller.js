@@ -75,6 +75,7 @@ export default class extends Controller {
     )
     list.sort(function (a, b) {
       let value1, value2
+      /* eslint-disable indent */
       switch (sortValue) {
         case 'coveredpercent':
           value1 = a.dataset.coveredPercent
@@ -121,6 +122,7 @@ export default class extends Controller {
           value2 = 0
           break
       }
+      /* eslint-enable indent */
 
       return sortOrder * value1.localeCompare(value2, undefined, { numeric: true })
     })
