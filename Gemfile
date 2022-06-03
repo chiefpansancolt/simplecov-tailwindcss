@@ -13,6 +13,9 @@ gem 'pry'
 gem 'rake'
 
 group :development do
+  gem 'erb_lint'
   gem 'rubocop'
+  gem 'rubocop-minitest'
   gem 'rubocop-performance'
+  gem 'rubocop-rake'
 end
