@@ -6,60 +6,62 @@
     data-file-name="<%= shortened_filename(file) %>">
   <a href="#<%= id(file) %>" class="block" data-action="click->slideover#openEvent" data-index="<%= id(file) %>">
     <div class="flex items-center px-4 py-4 sm:px-6 justify-between">
-      <div class="min-w-0 flex-1 justify-between items-center mr-4">
-        <div class="flex-1 flex items-center justify-between">
-          <p class="text-sm font-medium text-blue-700 truncate">
-            <%= shortened_filename(file) %>
-          </p>
-          <div class="ml-2 flex-shrink-0 flex">
-            <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <%= coverage_badge_class(file.covered_percent) %>">
-              <%= sprintf("%.2f", file.covered_percent.round(2)) %>%
-            </p>
+      <div class="flex-1 flex items-center justify-between pr-4">
+        <div>
+          <div class="min-w-0 flex-1 justify-between items-center mr-4">
+            <div class="text-sm font-medium text-blue-700 truncate">
+              <%= shortened_filename(file) %>
+            </div>
+            <div class="mt-2">
+              <div class="lg:flex">
+                <p class="flex items-center text-sm">
+                  <span class="font-bold pr-2">Lines:</span>
+                  <%= format_number(file.lines.count) %>
+                </p>
+                <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                  <span class="font-bold pr-2">Relevent Lines:</span>
+                  <%= format_number(file.covered_lines.count + file.missed_lines.count) %>
+                </p>
+                <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                  <span class="font-bold pr-2">Covered Lines:</span>
+                  <%= format_number(file.covered_lines.count) %>
+                </p>
+                <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                  <span class="font-bold pr-2">Missed Lines:</span>
+                  <%= format_number(file.missed_lines.count) %>
+                </p>
+                <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                  <span class="font-bold pr-2">AVG Hits/Lines:</span>
+                  <%= format_number(file.covered_strength.round(2)) %>
+                </p>
+              </div>
+              <% if branchable_result? %>
+                <div class="lg:flex mt-2">
+                  <p class="flex items-center text-sm lg:mt-0">
+                    <span class="font-bold pr-2">% Covered Branches:</span>
+                    <%= sprintf("%.2f", file.branches_coverage_percent.round(2)) %>%
+                  </p>
+                  <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                    <span class="font-bold pr-2">Branches:</span>
+                    <%= format_number(file.total_branches.count) %>
+                  </p>
+                  <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                    <span class="font-bold pr-2">Covered Branches:</span>
+                    <%= format_number(file.covered_branches.count) %>
+                  </p>
+                  <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
+                    <span class="font-bold pr-2">Missed Branches:</span>
+                    <%= format_number(file.missed_branches.count) %>
+                  </p>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
-        <div class="mt-2">
-          <div class="lg:flex">
-            <p class="flex items-center text-sm">
-              <span class="font-bold pr-2">Lines:</span>
-              <%= format_number(file.lines.count) %>
-            </p>
-            <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-              <span class="font-bold pr-2">Relevent Lines:</span>
-              <%= format_number(file.covered_lines.count + file.missed_lines.count) %>
-            </p>
-            <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-              <span class="font-bold pr-2">Covered Lines:</span>
-              <%= format_number(file.covered_lines.count) %>
-            </p>
-            <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-              <span class="font-bold pr-2">Missed Lines:</span>
-              <%= format_number(file.missed_lines.count) %>
-            </p>
-            <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-              <span class="font-bold pr-2">AVG Hits/Lines:</span>
-              <%= format_number(file.covered_strength.round(2)) %>
-            </p>
-          </div>
-          <% if branchable_result? %>
-            <div class="lg:flex mt-2">
-              <p class="flex items-center text-sm lg:mt-0">
-                <span class="font-bold pr-2">% Covered Branches:</span>
-                <%= sprintf("%.2f", file.branches_coverage_percent.round(2)) %>%
-              </p>
-              <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-                <span class="font-bold pr-2">Branches:</span>
-                <%= format_number(file.total_branches.count) %>
-              </p>
-              <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-                <span class="font-bold pr-2">Covered Branches:</span>
-                <%= format_number(file.covered_branches.count) %>
-              </p>
-              <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
-                <span class="font-bold pr-2">Missed Branches:</span>
-                <%= format_number(file.missed_branches.count) %>
-              </p>
-            </div>
-          <% end %>
+        <div class="flex-shrink-0 flex">
+          <p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full <%= coverage_badge_class(file.covered_percent) %>">
+            <%= sprintf("%.2f", file.covered_percent.round(2)) %>%
+          </p>
         </div>
       </div>
       <div>
