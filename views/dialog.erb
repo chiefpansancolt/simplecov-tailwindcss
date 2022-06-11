@@ -1,4 +1,4 @@
-<div class="flex h-full flex-col overflow-y-scroll bg-gray-50 dark:bg-slate-900 shadow-xl" id="<%= id(file) %>">
+<div class="flex h-full flex-col overflow-y-scroll bg-gray-50 dark:bg-slate-900 shadow-xl hidden" id="<%= id(file) %>">
   <div class="bg-blue-700 py-6 px-4 sm:px-6 sticky top-0 z-40">
     <div class="flex items-center justify-between">
       <h2 class="text-lg font-medium text-slate-100">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <div class="relative flex-1">
+  <div class="bg-blue-700 relative flex-1">
     <div class="absolute inset-0">
       <pre class="bg-blue-700 text-white whitespace-normal w-full text-xs pb-2">
         <ol class="list-decimal ml-12 text-slate-300 <%= branch_enabled_class %>">
