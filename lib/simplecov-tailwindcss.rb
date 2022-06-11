@@ -163,6 +163,23 @@ module SimpleCov
         end
       end
 
+      def code_coverage_class(status)
+        case status
+        when "covered", "missed", "skipped"
+          "text-slate-900"
+        else
+          "text-slate-900 dark:text-slate-200"
+        end
+      end
+
+      def branch_enabled_class
+        if branchable_result?
+          "mb-16"
+        else
+          "mb-12"
+        end
+      end
+
       def id(source_file)
         Digest::SHA1.hexdigest(source_file.filename)
       end
