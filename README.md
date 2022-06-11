@@ -22,7 +22,7 @@ Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.5 
 
 ## Installing
 
-Add the below to your Gemfile to make Simplecov Material available as a formatter for your application
+Add the below to your Gemfile to make Simplecov Material available as a formatter for your application.
 
 ### Ruby Gems Host
 
