@@ -9,7 +9,7 @@
     "test:start": "bundle exec rake test",
     "test:open": "open coverage/index.html",
     "test": "npm-run-all test:*",
-    "lint:markdown": "markdownlint CHANGELOG.md CODE_OF_CONDUCT.md CONTRIBUTING.md README.md -c .markdownlint.yml",
+    "lint:markdown": "markdownlint CHANGELOG.md .github/CODE_OF_CONDUCT.md .github/CONTRIBUTING.md README.md -c .markdownlint.yml",
     "lint:ruby": "rubocop",
     "lint:erb": "bundle exec erblint --lint-all",
     "lint:javascript": "eslint dist",
@@ -20,28 +20,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chiefpansancolt/simplecov-tailwind"
+    "url": "https://github.com/chiefpansancolt/simplecov-tailwindcss"
   },
   "keywords": [
     "simplecov",
     "simplecov-formatter",
     "simplecov-tailwind"
   ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiefpansancolt/simplecov-tailwindcss/issues"
+  },
   "author": {
     "name": "Christopher Pezza",
     "email": "github@chiefpansancolt.live"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chiefpansancolt/simplecov-tailwind/issues"
-  },
   "contributors": [
     {
       "name": "Christopher Pezza",
-      "email": "github@chiefpansancolt.live"
+      "email": "github@chiefpansancolt.live",
+      "url": "https://chiefpansancolt.live"
     }
   ],
-  "homepage": "https://chiefpansancolt.live/docs/simplecov_tailwind/",
+  "homepage": "https://chiefpansancolt.live/docs/simplecov_tailwindcss/",
   "babel": {},
   "devDependencies": {
     "@babel/core": "^7.18.2",
