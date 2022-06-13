@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "chiefpansancolt",
+      "name": "Christopher Pezza",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5841177?v=4",
+      "profile": "https://chrispezza.me",
+      "contributions": [
+        "code",
+        "doc",
+        "tool",
+        "test",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "simplecov-tailwindcss",
+  "projectOwner": "chiefpansancolt",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

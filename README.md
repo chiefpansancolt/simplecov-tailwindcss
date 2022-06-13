@@ -11,15 +11,6 @@
 
 Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.5 or greater.
 
-## Table of Contents
-
-- [Installing](#installing)
-- [Usage](#usage)
-- [Change Log](#change-log)
-- [Contributing](#contributing)
-- [Development](#development)
-- [License](#license)
-
 ## Installing
 
 Add the below to your Gemfile to make Simplecov Material available as a formatter for your application.
@@ -80,13 +71,13 @@ SimpleCov.formatters =
 
 ## Change Log
 
-Check out the [Change Log](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/master/CHANGELOG.md) for new breaking changes/features/bug fixes per release of a new version.
+Check out the [Change Log](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/CHANGELOG.md) for new breaking changes/features/bug fixes per release of a new version.
 
 ## Contributing
 
-Bug Reports, Feature Requests, and Pull Requests are welcome on GitHub at https://github.com/chiefpansancolt/simplecov-tailwindcss. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/master/CODE_OF_CONDUCT.md) code of conduct.
+Bug Reports, Feature Requests, and Pull Requests are welcome on GitHub at https://github.com/chiefpansancolt/simplecov-tailwindcss. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/.github/CODE_OF_CONDUCT.md) code of conduct.
 
-To see more about Contributing check out this [document](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/master/CONTRIBUTING.md).
+To see more about Contributing check out this [document](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/.github/CONTRIBUTING.md).
 
 - Fork Repo and create new branch
 - Once all is changed and committed create a pull request.
@@ -107,4 +98,25 @@ To install this gem onto your local machine, run `yarn gem:build`. Gems will be 
 
 ## License
 
-Simplecov Tailwind is available as open source under the terms of the [MIT License](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/master/LICENSE).
+Simplecov Tailwind is available as open source under the terms of the [MIT License](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/LICENSE).
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://chrispezza.me"><img src="https://avatars3.githubusercontent.com/u/5841177?v=4" width="100px;" alt=""/><br /><sub><b>Christopher Pezza</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Code">💻</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Documentation">📖</a> <a href="#tool-chiefpansancolt" title="Tools">🔧</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Tests">⚠️</a> <a href="#maintenance-chiefpansancolt" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind welcome!
