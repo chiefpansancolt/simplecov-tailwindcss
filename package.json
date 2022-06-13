@@ -9,7 +9,7 @@
     "test:start": "bundle exec rake test",
     "test:open": "open coverage/index.html",
     "test": "npm-run-all test:*",
-    "lint:markdown": "markdownlint CHANGELOG.md .github/CODE_OF_CONDUCT.md .github/CONTRIBUTING.md README.md -c .markdownlint.yml",
+    "lint:markdown": "markdownlint CHANGELOG.md .github/CODE_OF_CONDUCT.md .github/CONTRIBUTING.md README.md .github/PULL_REQUEST_TEMPLATE.md -c .markdownlint.yml",
     "lint:ruby": "rubocop",
     "lint:erb": "bundle exec erblint --lint-all",
     "lint:javascript": "eslint dist",
