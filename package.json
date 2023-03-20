@@ -1,6 +1,6 @@
 {
   "name": "simplecov-tailwind",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "HTML tailwind Design View for Simplecov formatter",
   "scripts": {
     "build": "npm-run-all build:*",
