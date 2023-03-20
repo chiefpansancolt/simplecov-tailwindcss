@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and Test
         run: |
-          gem install bundler -v 2.4.8
+          gem install bundler -v 2.3.26
           bundle install --jobs 4 --retry 3
           bundle exec rake test
       - name: Upload coverage results
