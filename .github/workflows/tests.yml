@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby: [3.1.2, 3.0.4, 2.7.6, 2.6.10, 2.5.9, head]
+        ruby: [3.2.1, 3.1.2, 3.0.4, 2.7.6, 2.6.10, 2.5.9, head]
 
     steps:
       - name: Checkout Code
@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and Test
         run: |
-          gem install bundler -v 2.3.11
+          gem install bundler -v 2.4.8
           bundle install --jobs 4 --retry 3
           bundle exec rake test
       - name: Upload coverage results
