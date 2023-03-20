@@ -36,7 +36,7 @@ jobs:
 
       - name: Install Ruby Gem dependencies
         run: |
-          gem install bundler -v 2.3.11
+          gem install bundler -v 2.4.8
           bundle install --jobs 4 --retry 3
 
       - name: Run linters

@@ -1,11 +1,12 @@
 # Simplecov Tailwind
 
-![GitHub Workflow Status Tests](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Tests?label=Tests&logo=github&style=for-the-badge)
-![GitHub Workflow Status Builds](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Build?label=Builds&logo=github&style=for-the-badge)
-![GitHub Workflow Status Lints](https://img.shields.io/github/workflow/status/chiefpansancolt/simplecov-tailwindcss/Lint?label=Lints&logo=github&style=for-the-badge)
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chiefpansancolt/simplecov-tailwindcss?label=Release&logo=github&style=for-the-badge)
-![Gem](https://img.shields.io/gem/dt/simplecov-tailwindcss?color=orange&logo=rubygems&style=for-the-badge)
-[![Discord](https://img.shields.io/discord/450095227185659905?color=yellow&label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/pBxGpfrmD4)
+[![GitHub](https://img.shields.io/github/license/chiefpansancolt/simplecov-tailwindcss?label=License&style=flat-square)](/LICENSE)
+[![GitHub Workflow Tests Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/tests.yml?label=Tests&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/tests.yml)
+[![GitHub Workflow Builds Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/builds.yml?label=Build&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/builds.yml)
+[![GitHub Workflow Lints Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/lints.yml?label=Lints&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/lints.yml)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chiefpansancolt/simplecov-tailwindcss?label=Release&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases)
+[![Gem](https://img.shields.io/gem/v/simplecov-tailwindcss?color=orange&label=Gem%20Version&logo=rubygems&style=flat-square)](https://rubygems.org/gems/simplecov-tailwindcss)
+[![Discord](https://img.shields.io/discord/450095227185659905?label=Discord&logo=discord&style=flat-square)](https://discord.gg/pBxGpfrmD4)
 
 > Note: To learn more about SimpleCov, check out the main repo at https://github.com/colszowka/simplecov
 
