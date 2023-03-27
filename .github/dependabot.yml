@@ -1,19 +1,19 @@
 version: 2
 updates:
-   Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
 
   # Maintain dependencies for npm
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
 
   # Maintain dependencies for Ruby
-  - package-ecosystem: "bundler"
-    directory: "/"
+  - package-ecosystem: 'bundler'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
