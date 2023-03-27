@@ -1,9 +1,9 @@
 import { Application } from '@hotwired/stimulus'
-import SearchController from './scripts/controllers/search_controller'
-import NavigationController from './scripts/controllers/navigation_controller'
-import DarkthemeController from './scripts/controllers/darktheme_controller'
-import SlideoverController from './scripts/controllers/slideover_controller'
 
+import DarkthemeController from './scripts/controllers/darktheme_controller'
+import NavigationController from './scripts/controllers/navigation_controller'
+import SearchController from './scripts/controllers/search_controller'
+import SlideoverController from './scripts/controllers/slideover_controller'
 import './scripts/timeago.js'
 
 window.Stimulus = Application.start()

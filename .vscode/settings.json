@@ -1,5 +1,6 @@
 {
   "yaml.schemas": {
-    "https://json.schemastore.org/github-issue-config.json": "file:///Users/chiefpansancolt/Documents/GitHub/ruby-gems/simplecov-tailwindcss/.github/ISSUE_TEMPLATE/config.yml"
+    "https://json.schemastore.org/github-issue-config.json": "file:///Users/chiefpansancolt/Documents/GitHub/ruby-gems/simplecov-tailwindcss/.github/ISSUE_TEMPLATE/config.yml",
+    "https://json.schemastore.org/dependabot-2.0.json": "file:///Users/chiefpansancolt/Documents/GitHub/ruby-gems/simplecov-tailwindcss/.github/dependabot.yml"
   }
 }
