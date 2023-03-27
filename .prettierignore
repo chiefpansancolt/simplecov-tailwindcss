@@ -11,3 +11,4 @@ Gemfile.lock
 yarn.lock
 bin/
 views/
+.vscode/
