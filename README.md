@@ -4,6 +4,7 @@
 [![GitHub Workflow Tests Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/tests.yml?label=Tests&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/tests.yml)
 [![GitHub Workflow Builds Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/builds.yml?label=Build&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/builds.yml)
 [![GitHub Workflow Lints Status](https://img.shields.io/github/actions/workflow/status/chiefpansancolt/simplecov-tailwindcss/lints.yml?label=Lints&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/lints.yml)
+[![CodeQL](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/chiefpansancolt/simplecov-tailwindcss/actions/workflows/github-code-scanning/codeql)
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chiefpansancolt/simplecov-tailwindcss?label=Release&logo=github&style=flat-square)](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases)
 [![Gem](https://img.shields.io/gem/v/simplecov-tailwindcss?color=orange&label=Gem%20Version&logo=rubygems&style=flat-square)](https://rubygems.org/gems/simplecov-tailwindcss)
 [![Discord](https://img.shields.io/discord/450095227185659905?label=Discord&logo=discord&style=flat-square)](https://discord.gg/pBxGpfrmD4)
@@ -12,63 +13,9 @@
 
 Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.5 or greater.
 
-## Installing
+## Installation and Usage
 
-Add the below to your Gemfile to make Simplecov Material available as a formatter for your application.
-
-### Ruby Gems Host
-
-```ruby
-# ./Gemfile
-
-group :test do
-  gem 'simplecov', require: false
-  gem 'simplecov-tailwindcss', require: false
-end
-```
-
-### Github Rubygems Host
-
-```ruby
-# ./Gemfile
-
-group :test do
-  gem "simplecov", require: false
-end
-
-source "https://rubygems.pkg.github.com/chiefpansancolt"
-  group :test do
-    gem "simplecov-tailwindcss", require: false
-  end
-end
-```
-
-## Usage
-
-To use Simplecov Tailwind you will need to ensure your Formatter is set to use Simplecov Tailwind.
-
-In your helper ensure your line about formatter usage is one of the following.
-
-Ensure to add the require tag at the top of your helper class where Simplecov is configured
-
-```ruby
-require 'simplecov-tailwindcss'
-```
-
-**Single Formatter Usage:**
-
-```ruby
-SimpleCov.formatter = SimpleCov::Formatter::TailwindFormatter
-```
-
-**Multi Formatter Usage:**
-
-```ruby
-SimpleCov.formatters =
-  SimpleCov::Formatter::MultiFormatter.new(
-    [SimpleCov::Formatter::HTMLFormatter, SimpleCov::Formatter::TailwindFormatter],
-  )
-```
+Checkout the [Documentation](https://simplecov-tailwind.chiefpansancolt.dev) for full details.
 
 ## Change Log
 
