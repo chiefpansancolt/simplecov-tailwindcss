@@ -1,5 +1,11 @@
 # Changelog
 
+## Version [2.1.1](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.1.1)
+
+### Updates
+
+- Dependency version bumps to stay up to date.
+
 ## Version [2.1.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.1.0)
 
 ### Features
