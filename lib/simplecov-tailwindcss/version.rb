@@ -3,7 +3,7 @@
 module SimpleCov
   module Formatter
     class TailwindFormatter
-      VERSION = "2.1.1"
+      VERSION = "2.1.2"
     end
   end
 end

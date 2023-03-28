@@ -1,5 +1,12 @@
 # Changelog
 
+## Version [2.1.2](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.1.2)
+
+### Updates
+
+- Dependency version bumps to stay up to date.
+- Updates to emails and websites ref in gemspec
+
 ## Version [2.1.1](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.1.1)
 
 ### Updates
