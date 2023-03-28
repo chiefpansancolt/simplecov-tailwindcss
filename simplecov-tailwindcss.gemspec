@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.name = "simplecov-tailwindcss"
   spec.version = SimpleCov::Formatter::TailwindFormatter::VERSION
   spec.authors = ["Christopher Pezza"]
-  spec.email = ["chiefpansancolt@gmail.com"]
+  spec.email = ["github@chiefpansancolt.dev"]
   spec.summary = "HTML Tailwind Design View for Simplecov formatter"
   spec.description =
     "HTML Tailwind Design View of Simplecov as a formatter" \
     "that is clean, easy to read."
-  spec.homepage = "https://chiefpansancolt.live/docs/simplecov_tailwind/"
+  spec.homepage = "https://simplecov-tailwind.chiefpansancolt.dev/"
   spec.license = "MIT"
 
   spec.required_ruby_version = ">= 2.5.0"

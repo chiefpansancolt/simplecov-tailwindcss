@@ -9,7 +9,7 @@ and stronger!
 This project and everyone participating in it is governed by the [Simplecov
 Material Code of Conduct](https://github.com/chiefpansancolt/simplecov-tailwindcss/blob/main/.github/CODE_OF_CONDUCT.md).
 By participating, you are expected to uphold this code. Please report
-unacceptable behavior to github@chiefpansancolt.live.
+unacceptable behavior to github@chiefpansancolt.dev.
 
 ## How can I Contribute
 
