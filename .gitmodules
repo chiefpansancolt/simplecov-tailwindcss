@@ -1,0 +1,4 @@
+[submodule "documentation"]
+	path = documentation
+	url = https://github.com/chiefpansancolt/simplecov-tailwind.chiefpansancolt.dev
+	branch = main
