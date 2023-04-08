@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+echo "== Starting Linting =="
+
+echo ""
+echo "== Linting Rubocop =="
+yarn lint:ruby
+
+echo ""
+echo "== Linting ERB =="
+yarn lint:erb
+
+echo ""
+echo "== Linting Markdown =="
+yarn lint:markdown
+
+echo ""
+echo "== Linting Javascript =="
+yarn lint:javascript
+
+echo ""
+echo "== Formatting with Prettier =="
+if ! yarn format; then
+  echo ""
+  echo "== Files found needing formatting =="
+  echo "== Initialting Fixes =="
+  yarn format:fix
+fi
+
+echo ""
+echo "== Linting Complete for Simplecov Tailwind =="
+
+echo ""
+echo "== Starting Lint for Documentation =="
+
+echo ""
+cd documentation
+yarn lint

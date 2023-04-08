@@ -1,7 +1,24 @@
 #!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
-set -vx
 
-bundle install
+command -v ruby >/dev/null 2>&1 || { echo >&2 "ruby is not installed.  Aborting."; exit 1; }
+command -v node >/dev/null 2>&1 || { echo >&2 "node is not installed.  Aborting."; exit 1; }
+command -v yarn >/dev/null 2>&1 || { echo >&2 "yarn is not installed.  Aborting."; exit 1; }
+
+echo "== Getting Setup =="
+
+echo ""
+echo "== Running Yarn Install =="
 yarn install
+
+echo ""
+echo "== Running Bundle Install =="
+bundle install
+
+echo ""
+echo "== Running Documentation Install =="
+cd documentation
+yarn install
+
+echo ""
+echo "== Setup Finished =="
+echo "Enjoy Coding and thank you for your contribution!"

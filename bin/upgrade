@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+echo "== Upgrade Starting =="
+
+echo ""
+echo "== Running Yarn Upgrade =="
+yarn upgrade --latest
+
+echo ""
+echo "== Running Bundle Upgrade =="
+bundle update
+
+echo ""
+echo "== Running Documentation Upgrade =="
+cd docs
+yarn upgrade --latest
+
+echo ""
+echo "== Upgrade Finished =="
