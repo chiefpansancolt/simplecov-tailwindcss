@@ -12,3 +12,4 @@ yarn.lock
 bin/
 views/
 .vscode/
+documentation/
