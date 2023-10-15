@@ -38,7 +38,8 @@
               <% end %>
               <% if branchable_result? %>
                 <% file.branches_for_line(line.number).each do |branch_type, hit_count| %>
-                  <span class="inline-flex items-center ml-1 px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 bg-blue-700 text-white float-right" title="<%= branch_type %> branch hit <%= hit_count %> times">
+                  <% color = hit_count > 0 ? "bg-blue-700 text-white" : "bg-red-500 text-slate-100" %>
+                  <span class="inline-flex items-center ml-1 px-2.5 py-0.5 rounded-full text-xs font-medium leading-4 float-right <%= color %>" title="<%= branch_type %> branch hit <%= hit_count %> times">
                     <%= branch_type %>: <%= hit_count %>
                   </span>
                 <% end %>
