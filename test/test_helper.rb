@@ -6,6 +6,7 @@ SimpleCov.start do
   enable_coverage :branch
   add_filter "/test/"
   add_group "Library", "/lib"
+  10.times { |i| add_group "Test #{i + 1}", "/lib" } if ENV["TEST_LONG_LIST_OF_GROUPS"]
 end
 
 SimpleCov.formatters = [

@@ -100,19 +100,18 @@ module SimpleCov
         template("file_detail").result(binding)
       end
 
-      # rubocop:disable Lint/SelfAssignment, Style/RedundantRegexpEscape
+      # rubocop:disable Lint/SelfAssignment
       def generate_group_page(title, files, created_date)
-        title_id = title.gsub(/^[^a-zA-Z]+/, "").gsub(/[^a-zA-Z0-9\-\_]/, "")
+        title_id = title.gsub(/^[^a-zA-Z]+/, "").gsub(/[^a-zA-Z0-9\-_]/, "")
         title_id = title_id
         template("group_page").result(binding)
       end
 
       def remove_spaces(name)
-        name.gsub(/^[^a-zA-Z]+/, "").gsub(/[^a-zA-Z0-9\-\_]/, "")
+        name.gsub(/^[^a-zA-Z]+/, "").gsub(/[^a-zA-Z0-9\-_]/, "")
       end
 
-      # rubocop:enable Lint/SelfAssignment, Style/RedundantRegexpEscape
-
+      # rubocop:enable Lint/SelfAssignment
       def format_number(number)
         whole, decimal = number.to_s.split(".")
         whole_with_commas =

@@ -1,5 +1,22 @@
 # Changelog
 
+## Version [2.2.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.2.0)
+
+Thank you to our contributors this release for fixes and new features!
+
+### Features
+
+- Add red badges for uncovered branches ([#59](https://github.com/chiefpansancolt/simplecov-tailwindcss/pull/59)) -> [@fidalgo](https://github.com/fidalgo)
+
+### Bug Fixes
+
+- Left hand sidebar cut off and unscrollable ([#57](https://github.com/chiefpansancolt/simplecov-tailwindcss/issues/57))
+- add padding in groups to be able to see the last item ([#58](https://github.com/chiefpansancolt/simplecov-tailwindcss/pull/58)) -> [@igas](https://github.com/igas)
+
+### Updates
+
+- Dependency version bumps to stay up to date.
+
 ## Version [2.1.2](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.1.2)
 
 ### Updates

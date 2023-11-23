@@ -4,27 +4,27 @@ echo "== Starting Linting =="
 
 echo ""
 echo "== Linting Rubocop =="
-yarn lint:ruby
+pnpm lint:ruby
 
 echo ""
 echo "== Linting ERB =="
-yarn lint:erb
+pnpm lint:erb
 
 echo ""
 echo "== Linting Markdown =="
-yarn lint:markdown
+pnpm lint:markdown
 
 echo ""
 echo "== Linting Javascript =="
-yarn lint:javascript
+pnpm lint:javascript
 
 echo ""
 echo "== Formatting with Prettier =="
-if ! yarn format; then
+if ! pnpm format; then
   echo ""
   echo "== Files found needing formatting =="
   echo "== Initialting Fixes =="
-  yarn format:fix
+  pnpm format:fix
 fi
 
 echo ""
@@ -35,4 +35,4 @@ echo "== Starting Lint for Documentation =="
 
 echo ""
 cd documentation
-yarn lint
+pnpm lint
