@@ -1,8 +1,8 @@
 module.exports = {
   plugins: [
-    require('prettier-plugin-erb'),
-    require('@trivago/prettier-plugin-sort-imports'),
-    require('prettier-plugin-tailwindcss'),
+    'prettier-plugin-erb',
+    '@trivago/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss',
   ],
   semi: false,
   singleQuote: true,

@@ -2,13 +2,13 @@
 
 command -v ruby >/dev/null 2>&1 || { echo >&2 "ruby is not installed.  Aborting."; exit 1; }
 command -v node >/dev/null 2>&1 || { echo >&2 "node is not installed.  Aborting."; exit 1; }
-command -v yarn >/dev/null 2>&1 || { echo >&2 "yarn is not installed.  Aborting."; exit 1; }
+command -v pnpm >/dev/null 2>&1 || { echo >&2 "pnpm is not installed.  Aborting."; exit 1; }
 
 echo "== Getting Setup =="
 
 echo ""
-echo "== Running Yarn Install =="
-yarn install
+echo "== Running pnpm Install =="
+pnpm install
 
 echo ""
 echo "== Running Bundle Install =="
@@ -17,7 +17,7 @@ bundle install
 echo ""
 echo "== Running Documentation Install =="
 cd documentation
-yarn install
+pnpm install
 
 echo ""
 echo "== Setup Finished =="

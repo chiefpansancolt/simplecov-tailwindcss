@@ -16,18 +16,32 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
 
       - name: Install Node.js dependencies
-        run: yarn install
+        run: pnpm install
+    
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Compile JS
-        run: yarn build:js
+        run: pnpm build:js
 
       - name: Upload Compiled JS
         uses: actions/upload-artifact@v3
@@ -41,18 +55,32 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
 
       - name: Install Node.js dependencies
-        run: yarn install
+        run: pnpm install
+    
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-      - name: Compile JS
-        run: yarn build:css
+      - name: Compile CSS
+        run: pnpm build:css
 
       - name: Upload Compiled CSS
         uses: actions/upload-artifact@v3
@@ -67,20 +95,26 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
 
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
       - name: Install Ruby Gem dependencies
         run: |
-          gem install bundler -v 2.4.10
+          gem install bundler -v 2.4.22
           bundle install --jobs 4 --retry 3
 
       - name: Build Gem
-        run: yarn gem:build
+        run: pnpm gem:build
 
       - name: Upload Compiled Gem
         uses: actions/upload-artifact@v3

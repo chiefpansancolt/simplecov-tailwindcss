@@ -3,8 +3,8 @@
 echo "== Upgrade Starting =="
 
 echo ""
-echo "== Running Yarn Upgrade =="
-yarn upgrade --latest
+echo "== Running pnpm Upgrade =="
+pnpm upgrade --latest
 
 echo ""
 echo "== Running Bundle Upgrade =="
@@ -13,7 +13,7 @@ bundle update
 echo ""
 echo "== Running Documentation Upgrade =="
 cd docs
-yarn upgrade --latest
+pnpm upgrade --latest
 
 echo ""
 echo "== Upgrade Finished =="

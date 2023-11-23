@@ -34,15 +34,15 @@ To see more about Contributing check out this [document](https://github.com/chie
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `yarn test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `pnpm test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-When working with CSS or JS ensure to run `yarn build` to compile tailwind and JS to the public folder. This will ensure you have the latest CSS and JS used when testing locally.
+When working with CSS or JS ensure to run `pnpm build` to compile tailwind and JS to the public folder. This will ensure you have the latest CSS and JS used when testing locally.
 
 _**NOTE: Do not commit any changes made in public folder from compiling as this will be performed by the owner before building of a release.**_
 
-To test locally run `yarn test` and a webpage will open after tests are complete and you will be able to see the page.
+To test locally run `pnpm test` and a webpage will open after tests are complete and you will be able to see the page.
 
-To install this gem onto your local machine, run `yarn gem:build`. Gems will be built/release by Owner.
+To install this gem onto your local machine, run `pnpm gem:build`. Gems will be built/release by Owner.
 
 ## License
 
