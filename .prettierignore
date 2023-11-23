@@ -13,3 +13,4 @@ bin/
 views/
 .vscode/
 documentation/
+pnpm-lock.yaml

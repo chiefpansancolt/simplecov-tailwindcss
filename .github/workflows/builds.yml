@@ -31,7 +31,7 @@ jobs:
 
       - name: Install Node.js dependencies
         run: pnpm install
-    
+
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
@@ -70,7 +70,7 @@ jobs:
 
       - name: Install Node.js dependencies
         run: pnpm install
-    
+
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
