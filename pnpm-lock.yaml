@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^3.2.2
     version: 3.2.2
   '@prettier/plugin-ruby':
-    specifier: ^4.0.2
-    version: 4.0.2(prettier@3.1.0)
+    specifier: ^4.0.3
+    version: 4.0.3(prettier@3.1.0)
   '@tailwindcss/forms':
     specifier: ^0.5.7
     version: 0.5.7(tailwindcss@3.3.5)
@@ -43,7 +43,7 @@ devDependencies:
     version: 3.1.0
   prettier-plugin-erb:
     specifier: ^0.4.0
-    version: 0.4.0(@prettier/plugin-ruby@4.0.2)(prettier@3.1.0)
+    version: 0.4.0(@prettier/plugin-ruby@4.0.3)(prettier@3.1.0)
   prettier-plugin-tailwindcss:
     specifier: ^0.5.7
     version: 0.5.7(@trivago/prettier-plugin-sort-imports@4.3.0)(prettier@3.1.0)
@@ -630,8 +630,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@prettier/plugin-ruby@4.0.2(prettier@3.1.0):
-    resolution: {integrity: sha512-TOGsMoOLF0BLwRozqtTB/w7HpDHotDSBPfLsMBpCjlMONLSoCWBF1NhZQjiioyLim7tCltzFrCqZp11WcrPOzA==}
+  /@prettier/plugin-ruby@4.0.3(prettier@3.1.0):
+    resolution: {integrity: sha512-SrPEjTqqsCoDBJ3UlReLnKZFqE76o4TBOlsIwRCnqPiO7O3kvy8k5ETG0IiGcNf9wqXLSCRzZXsK4+0cb26SQQ==}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
@@ -2078,13 +2078,13 @@ packages:
       prettier: 3.1.0
     dev: true
 
-  /prettier-plugin-erb@0.4.0(@prettier/plugin-ruby@4.0.2)(prettier@3.1.0):
+  /prettier-plugin-erb@0.4.0(@prettier/plugin-ruby@4.0.3)(prettier@3.1.0):
     resolution: {integrity: sha512-5RAdvT5BBf29hfC8GmqiMRFiD5g4BZGZDERZHvM5ouOor2TVT0jM0ntmCzFpS2Q32OkUAGFYsRxXDoYscvToXA==}
     peerDependencies:
       '@prettier/plugin-ruby': ^1.0.0
       prettier: '>=2.0.0 <2.3'
     dependencies:
-      '@prettier/plugin-ruby': 4.0.2(prettier@3.1.0)
+      '@prettier/plugin-ruby': 4.0.3(prettier@3.1.0)
       prettier: 3.1.0
       prettier-html-templates: 0.1.0(prettier@3.1.0)
     dev: true
