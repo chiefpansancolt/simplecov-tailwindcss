@@ -61,7 +61,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-erb": "^0.4.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5",
+    "tailwindcss": "^3.3.7",
     "timeago.js": "^4.0.2"
   }
 }
