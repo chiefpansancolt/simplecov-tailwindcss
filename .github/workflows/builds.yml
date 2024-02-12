@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
           version: 8
@@ -62,7 +62,7 @@ jobs:
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
           version: 8
@@ -102,7 +102,7 @@ jobs:
         with:
           ruby-version: .ruby-version
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
           version: 8
