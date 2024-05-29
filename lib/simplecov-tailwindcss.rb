@@ -20,10 +20,6 @@ module SimpleCov
       end
 
       def format(result)
-        Dir[File.join(File.dirname(__FILE__), "../public/*")].each do |path|
-          FileUtils.cp_r(path, asset_output_path)
-        end
-
         File.open(File.join(output_path, "index.html"), "wb") do |file|
           file.puts template("main").result(binding)
         end
@@ -61,19 +57,6 @@ module SimpleCov
 
       def output_path
         SimpleCov.coverage_path
-      end
-
-      def asset_output_path
-        return @asset_output_path if defined?(@asset_output_path) && @asset_output_path
-
-        @asset_output_path =
-          File.join(
-            output_path,
-            "dist",
-            SimpleCov::Formatter::TailwindFormatter::VERSION
-          )
-        FileUtils.mkdir_p(@asset_output_path)
-        @asset_output_path
       end
 
       def assets_path(name)
