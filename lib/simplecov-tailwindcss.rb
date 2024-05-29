@@ -84,6 +84,10 @@ module SimpleCov
         )
       end
 
+      def inline_public_asset(name)
+        File.read(File.join(File.dirname(__FILE__), "../public/", name))
+      end
+
       def generate_dialog(file)
         template("dialog").result(binding)
       rescue Encoding::CompatibilityError => e
