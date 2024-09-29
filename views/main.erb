@@ -4,7 +4,7 @@
     <title>Code Coverage for <%= SimpleCov.project_name %></title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="<%= assets_path('application.css') %>" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <style type="text/css" media="screen, projection, print"><%= inline_public_asset('application.css') %></style>
   </head>
   <body class="bg-gray-50 text-slate-500 dark:bg-slate-900 dark:text-slate-400"
         data-controller="slideover navigation search" data-slideover-hide-class="hidden" data-slideover-allow-close-value="true"
@@ -31,7 +31,7 @@
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                       </svg>
                     </div>
-                    <input data-action="input->search#searchEvent" class="block w-full rounded-md border border-slate-900/10 bg-white/95 py-2 pl-10 pr-3 text-sm text-slate-500 placeholder-slate-500 focus:border-blue-700 focus:focus:placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-700 dark:border-slate-50/[0.2] dark:bg-transparent dark:text-slate-400" placeholder="Search File(s)" type="search" autocomplete="on">
+                    <input id="search" data-action="input->search#searchEvent" class="block w-full rounded-md border border-slate-900/10 bg-white/95 py-2 pl-10 pr-3 text-sm text-slate-500 placeholder-slate-500 focus:border-blue-700 focus:focus:placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-700 dark:border-slate-50/[0.2] dark:bg-transparent dark:text-slate-400" placeholder="Search File(s)" type="search" autocomplete="on">
                   </div>
                 </div>
               </div>
@@ -141,6 +141,6 @@
         </div>
       </div>
     </div>
-    <script src="<%= assets_path('application.js') %>" type="text/javascript"></script>
+    <script type="text/javascript"><%= inline_public_asset('application.js') %></script>
   </body>
 </html>
