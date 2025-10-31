@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -27,17 +27,17 @@ jobs:
           gem install bundler -v 2.3.26
           bundle install --jobs 4 --retry 3
           bundle exec rake test
-
+  
   ruby-test-other:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        ruby: [3.1.4, 3.0.6, 2.7.8, 2.6.10]
+        ruby: [3.2.7, 3.3.10, 3.1.7, 3.0.7, 2.7.8, 2.6.10]
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -46,7 +46,7 @@ jobs:
 
       - name: Build and Test
         run: |
-          gem install bundler -v 2.4.22
+          gem install bundler -v 2.7.2
           bundle install --jobs 4 --retry 3
           bundle exec rake test
 
@@ -60,7 +60,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -79,7 +79,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby: [3.2.2]
+        ruby: [3.4.5]
 
     steps:
       - name: Checkout Code
@@ -92,12 +92,12 @@ jobs:
 
       - name: Build and Test
         run: |
-          gem install bundler -v 2.4.22
+          gem install bundler -v 2.7.2
           bundle install --jobs 4 --retry 3
           bundle exec rake test
 
       - name: Upload coverage results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: coverage-report
           path: coverage

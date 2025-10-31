@@ -16,23 +16,23 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 23
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 10
           run_install: false
 
       - name: Install Node.js dependencies
         run: pnpm install
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Setup pnpm cache
         with:
           path: ${{ env.STORE_PATH }}
@@ -55,23 +55,23 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 23
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 10
           run_install: false
 
       - name: Install Node.js dependencies
         run: pnpm install
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Setup pnpm cache
         with:
           path: ${{ env.STORE_PATH }}
@@ -95,17 +95,17 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          version: 8
+          version: 10
           run_install: false
 
       - name: Install Ruby Gem dependencies
@@ -117,7 +117,7 @@ jobs:
         run: pnpm gem:build
 
       - name: Upload Compiled Gem
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: simplecov-tailwindcss.gem
           path: ./*.gem

@@ -1,5 +1,5 @@
 <div class="navBody overflow-hidden <%= hide_show(title) %>" id="<%= title %>">
-  <header class="supports-backdrop-blur:bg-white/60 fixed left-28 z-40 w-full border-b border-slate-900/10 bg-white/95 backdrop-blur transition-colors duration-500 dark:border-slate-50/[0.2] dark:bg-slate-900">
+  <header class="supports-backdrop-blur:bg-white/60 fixed left-28 z-40 w-full border-b border-slate-900/10 bg-white/95 backdrop-blur-sm transition-colors duration-500 dark:border-slate-50/20 dark:bg-slate-900">
     <div class="mx-auto flex justify-between p-4 pr-36">
       <h1 class="text-lg font-semibold leading-6">
         <%= title %>
@@ -13,10 +13,10 @@
     </div>
   </header>
   <div class="mx-auto mt-14 px-4">
-    <div class="fixed inset-0 top-[8.125rem] left-28 right-auto z-20 w-[19.5rem] overflow-y-auto border-r border-solid border-slate-900/10 px-6 pb-10 dark:border-slate-50/[0.2]">
+    <div class="fixed inset-0 top-32.5 left-28 right-auto z-20 w-78 overflow-y-auto border-r border-solid border-slate-900/10 px-6 pb-10 dark:border-slate-50/20">
       <nav id="nav" class="relative lg:text-sm lg:leading-6">
         <div class="pointer-events-none sticky top-0 -ml-0.5">
-          <div class="h-6 bg-gradient-to-b from-white dark:from-slate-900"></div>
+          <div class="h-6 bg-linear-to-b from-white dark:from-slate-900"></div>
         </div>
         <ul role="list" class="mt-3 grid grid-cols-1 gap-5">
           <%= generate_stat_card('# of Files', format_number(files.length), 'text-slate-500') %>
@@ -34,9 +34,9 @@
         </ul>
       </nav>
     </div>
-    <div class="pl-[25.5rem]">
+    <div class="pl-102">
       <main class="relative z-20 mx-auto">
-        <ul role="list" id="<%= title %>-list" class="divide-y divide-slate-900/10 border-b border-slate-900/10 dark:divide-slate-50/[0.06] dark:border-slate-50/[0.2]">
+        <ul role="list" id="<%= title %>-list" class="divide-y divide-slate-900/10 border-b border-slate-900/10 dark:divide-slate-50/6 dark:border-slate-50/20">
           <% files.each.with_index do |source_file, index| %>
             <%= generate_file_detail(source_file) %>
           <% end %>

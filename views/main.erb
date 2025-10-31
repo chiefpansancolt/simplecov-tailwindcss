@@ -14,7 +14,7 @@
         data-navigation-active-class="bg-blue-700 text-slate-300" data-navigation-inactive-class="hover:bg-blue-700 hover:text-slate-300"
         data-search-hide-class="hidden" data-search-sort-order-value="-1" data-search-button-active-class="text-blue-700"
         data-search-button-inactive-class="text-slate-500 dark:text-slate-400">
-    <div class="supports-backdrop-blur:bg-white/60 sticky top-0 w-full flex-none bg-white/95 backdrop-blur transition-colors duration-500 dark:border-slate-50/[0.2] dark:bg-slate-900 z-40 border-b border-slate-900/10">
+    <div class="supports-backdrop-blur:bg-white/60 sticky top-0 w-full flex-none bg-white/95 backdrop-blur-sm transition-colors duration-500 dark:border-slate-50/20 dark:bg-slate-900 z-40 border-b border-slate-900/10">
       <div class="mx-auto">
         <div class="mx-4 border-b border-slate-900/10 py-4 dark:border-slate-300/10 lg:mx-0 lg:border-0 lg:px-8">
           <div class="relative flex items-center">
@@ -31,28 +31,28 @@
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                       </svg>
                     </div>
-                    <input data-action="input->search#searchEvent" class="block w-full rounded-md border border-slate-900/10 bg-white/95 py-2 pl-10 pr-3 text-sm text-slate-500 placeholder-slate-500 focus:border-blue-700 focus:focus:placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-700 dark:border-slate-50/[0.2] dark:bg-transparent dark:text-slate-400" placeholder="Search File(s)" type="search" autocomplete="on">
+                    <input data-action="input->search#searchEvent" class="block w-full rounded-md border border-slate-900/10 bg-white/95 py-2 pl-10 pr-3 text-sm text-slate-500 placeholder-slate-500 focus:border-blue-700 focus:focus:placeholder-slate-400 focus:outline-hidden focus:ring-1 focus:ring-blue-700 dark:border-slate-50/20 dark:bg-transparent dark:text-slate-400" placeholder="Search File(s)" type="search" autocomplete="on">
                   </div>
                 </div>
               </div>
             </div>
             <div class="relative flex w-96 justify-end ml-6">
-              <div class="relative z-0 inline-flex shadow-sm rounded-md">
-                <button data-action="click->search#orderEvent" data-search-target="asc" value="-1" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/[0.2] focus:outline-none focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
+              <div class="relative z-0 inline-flex shadow-xs rounded-md">
+                <button data-action="click->search#orderEvent" data-search-target="asc" value="-1" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
                   <span class="sr-only">ascending</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                   </svg>
                 </button>
-                <button data-action="click->search#orderEvent" data-search-target="desc" value="1" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/[0.2] focus:outline-none focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
+                <button data-action="click->search#orderEvent" data-search-target="desc" value="1" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
                   <span class="sr-only">Descending</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                   </svg>
                 </button>
               </div>
-              <div class="ml-3 pl-3 border-l border-slate-900/10 dark:border-slate-50/[0.2]">
-                <select data-search-target="sort" data-action="input->search#sortEvent" class="block w-full pr-10 py-2 text-base border-slate-900/10 dark:border-slate-50/[0.2] focus:outline-none focus:ring-blue-700 focus:border-blue-700 rounded-md text-slate-500 dark:bg-slate-900 dark:text-slate-400">
+              <div class="ml-3 pl-3 border-l border-slate-900/10 dark:border-slate-50/20">
+                <select data-search-target="sort" data-action="input->search#sortEvent" class="block w-full pr-10 py-2 text-base border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 rounded-md text-slate-500 dark:bg-slate-900 dark:text-slate-400">
                   <option value="coveredpercent">% Covered</option>
                   <option value="lines"># of Lines</option>
                   <option value="releventlines">Relevent Lines</option>
@@ -67,7 +67,7 @@
                   <% end %>
                 </select>
               </div>
-              <div class="ml-3 flex items-center pl-3 border-l border-slate-900/10 dark:border-slate-50/[0.2]">
+              <div class="ml-3 flex items-center pl-3 border-l border-slate-900/10 dark:border-slate-50/20">
                 <button type="button" data-action="click->darktheme#toggle">
                   <span class="dark:hidden">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
@@ -89,7 +89,7 @@
         </div>
       </div>
     </div>
-    <div class="supports-backdrop-blur:bg-white/60 fixed h-full w-28 overflow-y-auto border-r border-solid border-slate-200 bg-white/95 backdrop-blur transition-colors duration-500 dark:border-slate-50/[0.2] dark:bg-transparent">
+    <div class="supports-backdrop-blur:bg-white/60 fixed h-full w-28 overflow-y-auto border-r border-solid border-slate-200 bg-white/95 backdrop-blur-sm transition-colors duration-500 dark:border-slate-50/20 dark:bg-transparent">
       <div class="flex w-full flex-col items-center">
         <div class="w-full flex-1 space-y-1 p-2 pb-20">
           <div class="nav group flex w-full flex-col items-center rounded-md p-3 text-xs font-medium cursor-pointer bg-blue-700 text-slate-300" data-action="click->navigation#navigateEvent" data-index="All Files">
@@ -127,7 +127,7 @@
         <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
           <div data-slideover-target="view" class="pointer-events-auto relative w-screen max-w-3xl">
             <div class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">
-              <button data-action="click->slideover#close" type="button" class="rounded-md text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white">
+              <button data-action="click->slideover#close" type="button" class="rounded-md text-gray-300 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-white">
                 <span class="sr-only">Close panel</span>
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
