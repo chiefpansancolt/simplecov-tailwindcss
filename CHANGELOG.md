@@ -1,5 +1,13 @@
 # Changelog
 
+## Version [2.3.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.3.0)
+
+### Chores
+
+- Bump Dependencies
+- Update Repo files
+- Migrate to Tailwind v4
+
 ## Version [2.2.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.2.0)
 
 Thank you to our contributors this release for fixes and new features!
