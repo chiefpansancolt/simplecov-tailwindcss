@@ -44,7 +44,7 @@ jobs:
         run: pnpm build:js
 
       - name: Upload Compiled JS
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: application.js
           path: public/application.js
@@ -83,7 +83,7 @@ jobs:
         run: pnpm build:css
 
       - name: Upload Compiled CSS
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: application.css
           path: public/application.css
