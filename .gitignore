@@ -11,3 +11,6 @@ Gemfile.lock
 yarn-error.log
 test/reports/
 *.gem
+.claude/
+CLAUDE.md
+memory/

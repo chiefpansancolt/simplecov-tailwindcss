@@ -1,0 +1,290 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  checks: write
+  contents: write
+
+jobs:
+  build-js:
+    name: Build JS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install Node.js dependencies
+        run: pnpm install
+
+      - name: Compile JS
+        run: pnpm build:js
+
+      - name: Upload compiled JS
+        uses: actions/upload-artifact@v4
+        with:
+          name: application.js
+          path: public/application.js
+
+  build-css:
+    name: Build CSS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install Node.js dependencies
+        run: pnpm install
+
+      - name: Compile CSS
+        run: pnpm build:css
+
+      - name: Upload compiled CSS
+        uses: actions/upload-artifact@v4
+        with:
+          name: application.css
+          path: public/application.css
+
+  build-gem:
+    name: Build Gem
+    runs-on: ubuntu-latest
+    needs: [build-css, build-js]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Install Ruby Gem dependencies
+        run: |
+          gem install bundler -v 2.4.22
+          bundle install --jobs 4 --retry 3
+
+      - name: Build Gem
+        run: pnpm gem:build
+
+      - name: Upload compiled Gem
+        uses: actions/upload-artifact@v4
+        with:
+          name: simplecov-tailwindcss.gem
+          path: ./*.gem
+
+  test-ruby-old:
+    name: Test Ruby (2.5.9)
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: [2.5.9]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Build and Test
+        run: |
+          gem install bundler -v 2.3.26
+          bundle install --jobs 4 --retry 3
+          bundle exec rake test
+
+  test-ruby-other:
+    name: Test Ruby (${{ matrix.ruby }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: [2.6.10, 2.7.8, 3.0.7, 3.1.7, 3.2.7, 3.3.10]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Build and Test
+        run: |
+          gem install bundler -v 2.7.2
+          bundle install --jobs 4 --retry 3
+          bundle exec rake test
+
+  test-ruby-latest:
+    name: Test Ruby (3.4.5)
+    runs-on: ubuntu-latest
+    needs: [test-ruby-old, test-ruby-other]
+
+    strategy:
+      matrix:
+        ruby: [3.4.5]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Build and Test
+        run: |
+          gem install bundler -v 2.7.2
+          bundle install --jobs 4 --retry 3
+          bundle exec rake test
+
+      - name: Upload coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+
+  test-ruby-head:
+    name: Test Ruby (head)
+    runs-on: ubuntu-latest
+    needs: [test-ruby-old, test-ruby-other, test-ruby-latest]
+
+    strategy:
+      matrix:
+        ruby: [head]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+
+      - name: Build and Test
+        run: |
+          gem install bundler -v 2.4.22
+          bundle install --jobs 4 --retry 3
+          bundle exec rake test
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install Node.js dependencies
+        run: pnpm install
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+
+      - name: Install Ruby Gem dependencies
+        run: |
+          gem install bundler -v 2.6.9
+          bundle install --jobs 4 --retry 3
+
+      - name: Lint JavaScript
+        run: pnpm lint:javascript
+
+      - name: Lint Ruby
+        run: pnpm lint:ruby
+
+      - name: Lint ERB
+        run: pnpm lint:erb
+
+      - name: Check formatting
+        run: pnpm format:check

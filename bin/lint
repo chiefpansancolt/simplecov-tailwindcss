@@ -11,10 +11,6 @@ echo "== Linting ERB =="
 pnpm lint:erb
 
 echo ""
-echo "== Linting Markdown =="
-pnpm lint:markdown
-
-echo ""
 echo "== Linting Javascript =="
 pnpm lint:javascript
 

@@ -11,6 +11,24 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+    groups:
+      babel:
+        patterns:
+          - '@babel/*'
+      tailwindcss:
+        patterns:
+          - 'tailwindcss'
+          - '@tailwindcss/*'
+      prettier:
+        patterns:
+          - 'prettier'
+          - 'prettier-plugin-*'
+          - '@prettier/*'
+          - '@trivago/prettier-plugin-*'
+      eslint:
+        patterns:
+          - 'eslint'
+          - 'eslint-*'
 
   # Maintain dependencies for Ruby
   - package-ecosystem: 'bundler'
