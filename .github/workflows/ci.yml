@@ -51,7 +51,7 @@ jobs:
         run: pnpm build:js
 
       - name: Upload compiled JS
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: application.js
           path: public/application.js
@@ -94,7 +94,7 @@ jobs:
         run: pnpm build:css
 
       - name: Upload compiled CSS
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: application.css
           path: public/application.css
@@ -128,7 +128,7 @@ jobs:
         run: pnpm gem:build
 
       - name: Upload compiled Gem
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: simplecov-tailwindcss.gem
           path: ./*.gem
@@ -204,7 +204,7 @@ jobs:
           bundle exec rake test
 
       - name: Upload coverage results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: coverage-report
           path: coverage
