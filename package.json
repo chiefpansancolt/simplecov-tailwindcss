@@ -46,8 +46,8 @@
   "homepage": "https://simplecov-tailwind.chiefpansancolt.dev/",
   "babel": {},
   "devDependencies": {
-    "@babel/core": "^7.29.0",
-    "@babel/eslint-parser": "^7.28.6",
+    "@babel/core": "^7.29.7",
+    "@babel/eslint-parser": "^7.29.7",
     "@hotwired/stimulus": "^3.2.2",
     "@prettier/plugin-ruby": "^4.0.4",
     "@tailwindcss/forms": "^0.5.11",
