@@ -7,7 +7,7 @@ require "digest/sha1"
 
 # Ensure we are using a compatible version of SimpleCov
 major, minor, patch = SimpleCov::VERSION.scan(/\d+/).first(3).map(&:to_i)
-if major.negative? || minor < 9 || patch.negative?
+if major.negative? || (major.zero? && minor < 9) || patch.negative?
   raise "The version of SimpleCov you are using is too old. " \
         "Please update with `gem install simplecov` or `bundle update simplecov`"
 end
