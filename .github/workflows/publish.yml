@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build and publish gem to GitHub
-        uses: jstastny/publish-gem-to-github@master
+        uses: jstastny/publish-gem-to-github@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: chiefpansancolt
