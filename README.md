@@ -6,7 +6,7 @@
 [![Gem](https://img.shields.io/gem/v/simplecov-tailwindcss?color=orange&label=Gem%20Version&logo=rubygems&style=flat-square)](https://rubygems.org/gems/simplecov-tailwindcss)
 [![Discord](https://img.shields.io/discord/450095227185659905?label=Discord&logo=discord&style=flat-square)](https://discord.gg/pBxGpfrmD4)
 
-> Note: To learn more about SimpleCov, check out the main repo at https://github.com/colszowka/simplecov
+> Note: To learn more about SimpleCov, check out the main repo at https://github.com/simplecov-ruby/simplecov
 
 Generates a HTML Tailwind Design report generated from Simplecov using ruby 2.5 or greater.
 
