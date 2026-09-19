@@ -1,5 +1,27 @@
 # Changelog
 
+## Version [2.4.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.4.0)
+
+Thank you to our contributors this release!
+
+### Bug Fixes
+
+- Allow SimpleCov 1.x by loosening the gemspec constraint and fixing the version guard ([#118](https://github.com/chiefpansancolt/simplecov-tailwindcss/pull/118)) -> [@romanoff](https://github.com/romanoff)
+- Fix file coverage slide-over background rendering as opaque instead of translucent (Tailwind v4 dropped the `bg-opacity-*` utilities used for the overlay)
+
+### Documentation
+
+- Update `simplecov` main repository link ([#119](https://github.com/chiefpansancolt/simplecov-tailwindcss/pull/119)) -> [@G-Rath](https://github.com/G-Rath)
+
+### Updates
+
+- Add `cursor-pointer` to the sort ascending/descending buttons, sort field select, and dark/light theme toggle
+- Clear remaining SimpleCov 1.x deprecation warnings (`covered_percent(:branch)`, `skip`, `group`) on top of [#118](https://github.com/chiefpansancolt/simplecov-tailwindcss/pull/118), while keeping compatibility with SimpleCov 0.16+
+- Bump Ruby CI matrix to latest patch releases and add Ruby 4.0 as the latest-tested version
+- Bump `actions/setup-node` to v7 and pin `jstastny/publish-gem-to-github` to a release tag instead of `master`
+- Add `.nvmrc` to pin the project's base Node.js version
+- Bump Dependencies, including a major upgrade to Babel 8
+
 ## Version [2.3.0](https://github.com/chiefpansancolt/simplecov-tailwindcss/releases/tag/2.3.0)
 
 ### Chores
