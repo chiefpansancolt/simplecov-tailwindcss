@@ -32,6 +32,6 @@ Gem::Specification.new do |spec|
     `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "simplecov", "~> 0.16"
+  spec.add_dependency "simplecov", ">= 0.16", "< 2.0"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
