@@ -38,13 +38,13 @@
             </div>
             <div class="relative flex w-96 justify-end ml-6">
               <div class="relative z-0 inline-flex shadow-xs rounded-md">
-                <button data-action="click->search#orderEvent" data-search-target="asc" value="-1" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
+                <button data-action="click->search#orderEvent" data-search-target="asc" value="-1" type="button" class="relative inline-flex items-center px-2 py-2 rounded-l-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400 cursor-pointer">
                   <span class="sr-only">ascending</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                   </svg>
                 </button>
-                <button data-action="click->search#orderEvent" data-search-target="desc" value="1" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400">
+                <button data-action="click->search#orderEvent" data-search-target="desc" value="1" type="button" class="-ml-px relative inline-flex items-center px-2 py-2 rounded-r-md text-sm font-medium border border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 dark:bg-slate-900 text-slate-500 dark:text-slate-400 cursor-pointer">
                   <span class="sr-only">Descending</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
@@ -52,7 +52,7 @@
                 </button>
               </div>
               <div class="ml-3 pl-3 border-l border-slate-900/10 dark:border-slate-50/20">
-                <select data-search-target="sort" data-action="input->search#sortEvent" class="block w-full pr-10 py-2 text-base border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 rounded-md text-slate-500 dark:bg-slate-900 dark:text-slate-400">
+                <select data-search-target="sort" data-action="input->search#sortEvent" class="block w-full pr-10 py-2 text-base border-slate-900/10 dark:border-slate-50/20 focus:outline-hidden focus:ring-blue-700 focus:border-blue-700 rounded-md text-slate-500 dark:bg-slate-900 dark:text-slate-400 cursor-pointer">
                   <option value="coveredpercent">% Covered</option>
                   <option value="lines"># of Lines</option>
                   <option value="releventlines">Relevent Lines</option>
@@ -68,7 +68,7 @@
                 </select>
               </div>
               <div class="ml-3 flex items-center pl-3 border-l border-slate-900/10 dark:border-slate-50/20">
-                <button type="button" data-action="click->darktheme#toggle">
+                <button type="button" data-action="click->darktheme#toggle" class="cursor-pointer">
                   <span class="dark:hidden">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
                       <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path>
@@ -123,7 +123,7 @@
     <div class="fixed inset-0 overflow-hidden z-50 hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true"
          data-slideover-target="container" data-action="click->slideover#closeBackground keyup@window->slideover#closeWithKeyboard">
       <div class="absolute inset-0 overflow-hidden">
-        <div data-slideover-target="background" class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+        <div data-slideover-target="background" class="absolute inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
         <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
           <div data-slideover-target="view" class="pointer-events-auto relative w-screen max-w-3xl">
             <div class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">

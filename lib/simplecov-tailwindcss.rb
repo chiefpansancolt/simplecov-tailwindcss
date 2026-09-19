@@ -12,6 +12,8 @@ if major.negative? || (major.zero? && minor < 9) || patch.negative?
         "Please update with `gem install simplecov` or `bundle update simplecov`"
 end
 
+SIMPLECOV_MODERN_API = major >= 1
+
 module SimpleCov
   module Formatter
     class TailwindFormatter # rubocop:disable Metrics/ClassLength
@@ -98,6 +100,10 @@ module SimpleCov
 
       def generate_file_detail(file)
         template("file_detail").result(binding)
+      end
+
+      def branch_covered_percent(file)
+        SIMPLECOV_MODERN_API ? file.covered_percent(:branch) : file.branches_coverage_percent
       end
 
       # rubocop:disable Lint/SelfAssignment

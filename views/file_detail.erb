@@ -1,7 +1,7 @@
 <li data-lines="<%= file.lines.count %>" data-relevent-lines="<%= file.covered_lines.count + file.missed_lines.count %>"
     data-covered-lines="<%= file.covered_lines.count %>" data-missed-lines="<%= file.missed_lines.count %>"
     data-covered-strength="<%= file.covered_strength %>" data-covered-percent="<%= file.covered_percent %>"
-    data-branch-covered-percent="<%= file.branches_coverage_percent %>" data-branches="<%= file.total_branches.count %>"
+    data-branch-covered-percent="<%= branch_covered_percent(file) %>" data-branches="<%= file.total_branches.count %>"
     data-branches-covered="<%= file.covered_branches.count %>" data-branches-missed="<%= file.missed_branches.count %>"
     data-file-name="<%= shortened_filename(file) %>">
   <a href="#<%= id(file) %>" class="block" data-action="click->slideover#openEvent" data-index="<%= id(file) %>">
@@ -39,7 +39,7 @@
                 <div class="lg:flex mt-2">
                   <p class="flex items-center text-sm lg:mt-0">
                     <span class="font-bold pr-2">% Covered Branches:</span>
-                    <%= sprintf("%.2f", file.branches_coverage_percent.round(2)) %>%
+                    <%= sprintf("%.2f", branch_covered_percent(file).round(2)) %>%
                   </p>
                   <p class="mt-2 flex items-center text-sm lg:mt-0 lg:ml-6">
                     <span class="font-bold pr-2">Branches:</span>

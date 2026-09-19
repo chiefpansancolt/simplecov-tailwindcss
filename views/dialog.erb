@@ -16,8 +16,8 @@
         <% if branchable_result? %>
           <p class="flex items-center text-sm pl-2">
             <span class="pr-2 text-slate-100">% Branches Covered:</span>
-            <span class="font-bold <%= coverage_class(file.branches_coverage_percent) %>">
-              <%= file.branches_coverage_percent.round(2).to_s %>%
+            <span class="font-bold <%= coverage_class(branch_covered_percent(file)) %>">
+              <%= branch_covered_percent(file).round(2).to_s %>%
             </span>
           </p>
           <% end %>

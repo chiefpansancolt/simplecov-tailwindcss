@@ -1,5 +1,5 @@
 ---
-require:
+plugins:
   - rubocop-minitest
   - rubocop-performance
   - rubocop-rake
@@ -111,7 +111,7 @@ Bundler/GemComment:
     - '**/*.gemfile'
     - '**/Gemfile'
     - '**/gems.rb'
-  IgnoredGems: []
+  AllowedGems: []
   OnlyFor: []
 
 Bundler/GemFilename:
@@ -745,7 +745,7 @@ Layout/LineLength:
   URISchemes:
     - http
     - https
-  IgnoreCopDirectives: true
+  AllowCopDirectives: true
   AllowedPatterns: []
 
 Layout/MultilineArrayBraceLayout:
@@ -1555,7 +1555,7 @@ Lint/MissingCopEnableDirective:
   Description: 'Checks for a `# rubocop:enable` after `# rubocop:disable`.'
   Enabled: true
   VersionAdded: '0.52'
-  MaximumRangeSize: .inf
+  MaxRangeSize: .inf
 
 Lint/MissingSuper:
   Description: >-
@@ -1616,7 +1616,7 @@ Lint/NumberConversion:
   VersionAdded: '0.53'
   VersionChanged: '1.1'
   SafeAutoCorrect: false
-  IgnoredClasses:
+  AllowedClasses:
     - Time
     - DateTime
 
@@ -2863,7 +2863,7 @@ Style/DocumentationMethod:
     - 'test/**/*'
   RequireForNonPublicMethods: false
 
-Style/DoubleCopDisableDirective:
+Lint/CopDirectiveSyntax:
   Description: 'Checks for double rubocop:disable comments on a single line.'
   Enabled: true
   VersionAdded: '0.73'
@@ -3011,7 +3011,7 @@ Style/FetchEnvVar:
     - https://rubystyle.guide/#hash-fetch-defaults
   Enabled: pending
   VersionAdded: '1.28'
-  AllowedVars: []
+  AllowedVariables: []
 
 Style/FileRead:
   Description: 'Favor `File.(bin)read` convenience methods.'
