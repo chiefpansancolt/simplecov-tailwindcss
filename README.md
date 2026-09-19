@@ -53,12 +53,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://chrispezza.me"><img src="https://avatars3.githubusercontent.com/u/5841177?v=4" width="100px;" alt=""/><br /><sub><b>Christopher Pezza</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Code">💻</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Documentation">📖</a> <a href="#tool-chiefpansancolt" title="Tools">🔧</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Tests">⚠️</a> <a href="#maintenance-chiefpansancolt" title="Maintenance">🚧</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://chrispezza.me"><img src="https://avatars3.githubusercontent.com/u/5841177?v=4?s=100" width="100px;" alt="Christopher Pezza"/><br /><sub><b>Christopher Pezza</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Code">💻</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Documentation">📖</a> <a href="#tool-chiefpansancolt" title="Tools">🔧</a> <a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=chiefpansancolt" title="Tests">⚠️</a> <a href="#maintenance-chiefpansancolt" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://andrewm.codes/"><img src="https://avatars.githubusercontent.com/u/18423853?v=4?s=100" width="100px;" alt="Andrew Mason"/><br /><sub><b>Andrew Mason</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=andrewmcodes" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://igas.me/"><img src="https://avatars.githubusercontent.com/u/175652?v=4?s=100" width="100px;" alt="Marcus Wood"/><br /><sub><b>Marcus Wood</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/issues?q=author%3Aigas" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://fidalgo.pt/"><img src="https://avatars.githubusercontent.com/u/22743?v=4?s=100" width="100px;" alt="Paulo Fidalgo"/><br /><sub><b>Paulo Fidalgo</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=fidalgo" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/romanoff"><img src="https://avatars.githubusercontent.com/u/222327?v=4?s=100" width="100px;" alt="Andriy Romanov"/><br /><sub><b>Andriy Romanov</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/issues?q=author%3Aromanoff" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/G-Rath"><img src="https://avatars.githubusercontent.com/u/3151613?v=4?s=100" width="100px;" alt="Gareth Jones"/><br /><sub><b>Gareth Jones</b></sub></a><br /><a href="https://github.com/chiefpansancolt/simplecov-tailwindcss/commits?author=G-Rath" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

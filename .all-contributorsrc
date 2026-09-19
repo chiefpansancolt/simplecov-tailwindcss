@@ -17,6 +17,51 @@
         "test",
         "maintenance"
       ]
+    },
+    {
+      "login": "andrewmcodes",
+      "name": "Andrew Mason",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18423853?v=4",
+      "profile": "https://andrewm.codes/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "igas",
+      "name": "Marcus Wood",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175652?v=4",
+      "profile": "https://igas.me/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "fidalgo",
+      "name": "Paulo Fidalgo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22743?v=4",
+      "profile": "http://fidalgo.pt/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "romanoff",
+      "name": "Andriy Romanov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/222327?v=4",
+      "profile": "https://github.com/romanoff",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "G-Rath",
+      "name": "Gareth Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3151613?v=4",
+      "profile": "https://github.com/G-Rath",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -24,5 +69,6 @@
   "projectOwner": "chiefpansancolt",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
