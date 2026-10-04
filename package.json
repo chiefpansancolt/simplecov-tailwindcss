@@ -57,7 +57,7 @@
     "eslint": "^10.11.0",
     "markdownlint": "^0.41.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.9",
     "prettier-plugin-erb": "^0.4.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
