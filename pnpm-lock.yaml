@@ -19,7 +19,7 @@ importers:
         version: 3.2.2
       '@prettier/plugin-ruby':
         specifier: ^4.0.4
-        version: 4.0.4(prettier@3.9.9)
+        version: 4.0.4(prettier@3.9.10)
       '@tailwindcss/forms':
         specifier: ^0.5.11
         version: 0.5.11(tailwindcss@4.3.3)
@@ -28,7 +28,7 @@ importers:
         version: 0.5.20(tailwindcss@4.3.3)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^6.0.2
-        version: 6.0.2(prettier@3.9.9)(supports-color@5.5.0)
+        version: 6.0.2(prettier@3.9.10)(supports-color@5.5.0)
       esbuild:
         specifier: ^0.28.2
         version: 0.28.2
@@ -42,14 +42,14 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
       prettier:
-        specifier: ^3.9.9
-        version: 3.9.9
+        specifier: ^3.9.10
+        version: 3.9.10
       prettier-plugin-erb:
         specifier: ^0.4.0
-        version: 0.4.0(@prettier/plugin-ruby@4.0.4(prettier@3.9.9))(prettier@3.9.9)
+        version: 0.4.0(@prettier/plugin-ruby@4.0.4(prettier@3.9.10))(prettier@3.9.10)
       prettier-plugin-tailwindcss:
         specifier: ^0.8.1
-        version: 0.8.1(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.9)(supports-color@5.5.0))(prettier@3.9.9)
+        version: 0.8.1(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)(supports-color@5.5.0))(prettier@3.9.10)
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -143,10 +143,10 @@ importers:
         version: 16.1.6(@typescript-eslint/parser@8.72.1(eslint@9.39.5(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@5.9.3))(eslint@9.39.5(jiti@2.7.0)(supports-color@5.5.0))(supports-color@5.5.0)(typescript@5.9.3)
       prettier:
         specifier: ^3.8.1
-        version: 3.9.9
+        version: 3.9.10
       prettier-plugin-tailwindcss:
         specifier: ^0.7.2
-        version: 0.7.4(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.9)(supports-color@5.5.0))(prettier@3.9.9)
+        version: 0.7.4(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)(supports-color@5.5.0))(prettier@3.9.10)
       sharp:
         specifier: 0.34.5
         version: 0.34.5
@@ -2794,8 +2794,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.9.9:
-    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+  prettier@3.9.10:
+    resolution: {integrity: sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3954,9 +3954,9 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@prettier/plugin-ruby@4.0.4(prettier@3.9.9)':
+  '@prettier/plugin-ruby@4.0.4(prettier@3.9.10)':
     dependencies:
-      prettier: 3.9.9
+      prettier: 3.9.10
 
   '@react-aria/focus@3.22.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -4081,7 +4081,7 @@ snapshots:
 
   '@tanstack/virtual-core@3.19.9': {}
 
-  '@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.9)(supports-color@5.5.0)':
+  '@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)(supports-color@5.5.0)':
     dependencies:
       '@babel/generator': 7.29.8
       '@babel/parser': 7.29.9
@@ -4091,7 +4091,7 @@ snapshots:
       lodash-es: 4.18.1
       minimatch: 9.0.9
       parse-imports-exports: 0.2.4
-      prettier: 3.9.9
+      prettier: 3.9.10
     transitivePeerDependencies:
       - supports-color
 
@@ -5938,29 +5938,29 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-html-templates@0.1.0(prettier@3.9.9):
+  prettier-html-templates@0.1.0(prettier@3.9.10):
     dependencies:
-      prettier: 3.9.9
+      prettier: 3.9.10
 
-  prettier-plugin-erb@0.4.0(@prettier/plugin-ruby@4.0.4(prettier@3.9.9))(prettier@3.9.9):
+  prettier-plugin-erb@0.4.0(@prettier/plugin-ruby@4.0.4(prettier@3.9.10))(prettier@3.9.10):
     dependencies:
-      '@prettier/plugin-ruby': 4.0.4(prettier@3.9.9)
-      prettier: 3.9.9
-      prettier-html-templates: 0.1.0(prettier@3.9.9)
+      '@prettier/plugin-ruby': 4.0.4(prettier@3.9.10)
+      prettier: 3.9.10
+      prettier-html-templates: 0.1.0(prettier@3.9.10)
 
-  prettier-plugin-tailwindcss@0.7.4(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.9)(supports-color@5.5.0))(prettier@3.9.9):
+  prettier-plugin-tailwindcss@0.7.4(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)(supports-color@5.5.0))(prettier@3.9.10):
     dependencies:
-      prettier: 3.9.9
+      prettier: 3.9.10
     optionalDependencies:
-      '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier@3.9.9)(supports-color@5.5.0)
+      '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier@3.9.10)(supports-color@5.5.0)
 
-  prettier-plugin-tailwindcss@0.8.1(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.9)(supports-color@5.5.0))(prettier@3.9.9):
+  prettier-plugin-tailwindcss@0.8.1(@trivago/prettier-plugin-sort-imports@6.0.2(prettier@3.9.10)(supports-color@5.5.0))(prettier@3.9.10):
     dependencies:
-      prettier: 3.9.9
+      prettier: 3.9.10
     optionalDependencies:
-      '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier@3.9.9)(supports-color@5.5.0)
+      '@trivago/prettier-plugin-sort-imports': 6.0.2(prettier@3.9.10)(supports-color@5.5.0)
 
-  prettier@3.9.9: {}
+  prettier@3.9.10: {}
 
   prism-react-renderer@2.4.1(react@19.2.4):
     dependencies:
